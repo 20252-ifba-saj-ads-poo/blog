@@ -53,6 +53,11 @@ Pressione <kbd>F1</kbd> e selecione a opção `Configure Scene Builde path`
 
 Clique com o lado direita do mouse e escolha a opção `Open in Scene Builder`
 
+### Entrega
+
+Construa uma tela de cadastro e entregue no [link](https://classroom.github.com/a/W-n-g7BT)
+
+[Exemplo](https://github.com/20242-ifba-saj-ads-poo/exercicio-03-javafx-tela-cadastro-leandro-costa)
 
 
 ## JavaFX Login Page
