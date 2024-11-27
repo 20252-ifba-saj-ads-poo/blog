@@ -5,7 +5,7 @@ tag:
   - java
 category:
   - exercicio
-  - entrega
+order: 4
 ---
 
 # Exercício: Area do Prédio OO

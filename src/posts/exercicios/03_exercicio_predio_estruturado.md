@@ -6,6 +6,7 @@ tag:
 category:
   - exercicio
   - entrega
+order: 3
 ---
 
 # Exercício: Area do Prédio
