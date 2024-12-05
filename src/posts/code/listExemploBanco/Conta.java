@@ -51,6 +51,10 @@ public class Conta {
         return false;
     }
 
+    public double getSaldo() {
+        return saldo;
+    }
+
     @Override
     public String toString() {
         return "Conta [numero=" + numero + ", cliente=" + cliente + ", saldo=" + saldo + "]";
