@@ -40,4 +40,15 @@ public class Agencia {
         }
         return total;
     }  
+    public Conta getConta(int numeroConta) {
+        // buscar a conta que tem o numero igual a numeroConta
+        for (int i = 0; i < contas.size(); i++) {
+            Conta c = contas.get(i);
+            if(c.getNumero() == numeroConta){
+                return c;
+            }
+        }
+        return null;
+        
+  }
 }
