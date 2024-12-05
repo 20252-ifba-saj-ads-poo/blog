@@ -35,7 +35,7 @@ public class Agencia {
     public double totalDinheiro() {
         double total = 0;
         for (int i = 0; i < contas.size(); i++) {
-            total+= contas.get(i).saldo;
+            total+= contas.get(i).getSaldo();
             
         }
         return total;
