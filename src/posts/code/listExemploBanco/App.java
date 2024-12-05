@@ -7,8 +7,10 @@ public class App {
     public static void main(String[] args) throws Exception {
 
         Agencia ag1 = new Agencia(2);    
-        Conta conta1 = ag1.criarConta("Leandro");
-        Conta conta2 = ag1.criarConta("Isabela");
+        int numeroConta1 = ag1.criarConta("Leandro");
+        int numeroConta2 = ag1.criarConta("Isabela");
+        Conta conta1 = ag1.getConta(numeroConta1);
+        Conta conta2 = ag1.getConta(numeroConta2);
         //Somente mesmo pacote pode chamar o new
         //Conta conta3 = new Conta(0, null);// erro
         
