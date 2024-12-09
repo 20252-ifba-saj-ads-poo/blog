@@ -20,6 +20,7 @@ order: 8
     - ligar e desligar;
     - aumentar e diminuir volume;
     - inserir filme;
+    - remover filme;
     - play e stop.
 
     O programa deve obedecer as seguintes regras:
