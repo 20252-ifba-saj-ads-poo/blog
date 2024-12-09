@@ -80,13 +80,14 @@ public class DVD {
     //play e stop.
     //Só é possível dar play no DVD se existir algum filme inserido
     //Ao dar play deve aparecer o nome e a duração do filme que está sendo exibido.
-    public void play(){
+    public String play(){
         if(ligado){
             if(filme!= null){
                 emPlay = true;
-                System.out.println(filme.getNome()+" - "+filme.getDuracao());
+                return filme.getNome()+" - "+filme.getDuracao();
             }
         }
+        return null;
     }
     //Só é possível dar stop se o DVD estiver em play;
     public void stop(){
