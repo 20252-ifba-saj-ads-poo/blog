@@ -72,8 +72,8 @@ Construa uma tela de cadastro e entregue no [link](https://classroom.github.com/
 
 ## Repositórios templates
 
-- [Step 1](https://github.com/20241-ifba-saj-ads-poo/javafx-template-step1)
-- [Step 2](https://github.com/20241-ifba-saj-ads-poo/javafx-template-step2)
+- [Step 1](https://github.com/20242-ifba-saj-ads-poo/javafx-template-step1)
+- [Step 2](https://github.com/20242-ifba-saj-ads-poo/javafx-template-step2)
 
 
 ## JavaFX 
