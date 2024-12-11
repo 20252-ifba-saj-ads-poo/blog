@@ -15,7 +15,7 @@ category:
 [Entrega](https://classroom.github.com/a/6XkbVlN2)
 
 
-1. BIB-DIG - **Biblioteca Digital:**
+1. BIB-MUS - **Biblioteca de Música Digital:**
 1. GEN-ESC -**Gerenciamento de Escola:**
 1. LOJ-ROU - **Sistema de Loja de Roupas:**
 1. RES-HOT - **Sistema de Reservas de Hotéis:**
