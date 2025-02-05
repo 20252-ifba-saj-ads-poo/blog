@@ -268,7 +268,7 @@ No entanto, ao tentar acessar um atributo *private,* obtemos um erro:
     2 errors
 ```
     
-Em vez disso, usamos os métodos getNome()e setNome()para acessar e atualizar a variável:
+Em vez disso, usamos os métodos `getNome()` e `setNome()` para acessar e atualizar a variável:
 
 Exemplo
 ```java

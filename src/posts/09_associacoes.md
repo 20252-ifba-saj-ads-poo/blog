@@ -80,7 +80,7 @@ Produto -o Fornecedor
 
 ## Composição
 - A classe contida é instanciada pela classe principal 
-- Quando uma classe principal é retirada da memória, as outras classes também são.
+- Quando uma instancia da classe principal é retirada da memória, as instancias das outras classes também são.
 - O todo contém as partes (e não referências para as partes). Quando o todo desaparece, todas as partes também desaparecem.
 
 <figure>
