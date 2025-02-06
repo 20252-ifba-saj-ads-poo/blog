@@ -98,7 +98,7 @@ rectangle "classe" #palegreen;line:green;text:green{
 
 ## Métodos estáticos
 - A linguagem de programação Java suporta métodos estáticos, bem como variáveis estáticas. 
-- Os métodos estáticos, que têm o modificador static em suas declarações, deve ser chamado com o nome da classe, sem a necessidade de criação de uma instância da classe
+- Os métodos estáticos, que têm o modificador `static` em suas declarações, deve ser chamado com o nome da classe, sem a necessidade de criação de uma instância da classe
 
 ```java
 ClassName.methodName(args)
