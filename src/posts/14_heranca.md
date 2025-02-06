@@ -57,7 +57,7 @@ Morcego batman = new Mamifero();//erro
 ```
 
 - Com base no que foi dito até aqui podemos deduzir que o item 2 deve causar um erro já que não é possível garantir que todo mamífero seja um morcego
-- Já o item 1 pode parecer estranho, pois a variável é do tipo Mamífero e o objeto para o qual a variável se refere é do tipo Morcego
+- Já o item 1 pode parecer estranho, pois a variável é do tipo `Mamifero` e o objeto para o qual a variável se refere é do tipo `Morcego`
     - Devemos saber que toda variável pode receber um objeto que seja compatível com o seu tipo e neste caso todo Morcego CERTAMENTE **é um** Mamífero
 
 ```java
