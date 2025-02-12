@@ -44,27 +44,4 @@ Gerenciar a lista de produtos cadastrados, recuperar os dados de um produto ou r
 5. Qualquer erro ou exceção gerada na **Camada de Negócio** é capturada pela **Camada de Apresentação** e exibida de maneira amigável para o usuário.
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 [Equipes](./exercicios/Trabalho/equipes.md)
