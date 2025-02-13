@@ -1,6 +1,6 @@
 ---
 icon: study
-date: 2024-02-13 18:30:00.00 -3
+date: 2025-02-13 18:30:00.00 -3
 tag:
   - heranca
 category:
