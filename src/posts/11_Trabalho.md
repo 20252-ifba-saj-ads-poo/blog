@@ -45,3 +45,28 @@ Gerenciar a lista de produtos cadastrados, recuperar os dados de um produto ou r
 
 
 [Equipes](./exercicios/Trabalho/equipes.md)
+
+
+## Barema para Avaliação do Trabalho
+
+O barema a seguir será utilizado para avaliar a implementação do projeto. Cada critério possui um peso específico, totalizando 100 pontos.
+
+### 1. **Interface Gráfica (JavaFX) - 20 pontos**
+   - **Completude e Funcionalidade da Interface (10 pontos)**: A interface permite que o usuário realize todas as ações propostas no trabalho (ex: cadastrar, remover, atualizar dados).
+   - **Usabilidade e Apresentação (5 pontos)**: A interface é amigável, clara e intuitiva, com uma boa organização dos componentes gráficos.
+   - **Exibição de Mensagens de Erro (5 pontos)**: As mensagens de erro e exceções são exibidas de forma clara, amigável e ajudam o usuário a corrigir os erros.
+
+### 2. **Camada de Negócio (Regras de Negócio) - 30 pontos**
+   - **Implementação das Regras de Negócio (20 pontos)**: Todas as regras de negócio especificadas no projeto foram implementadas corretamente e respeitam as condições do domínio (ex: limites de estoque, validação de campos).
+   - **Tratamento e Lançamento de Exceções (10 pontos)**: As exceções são corretamente lançadas pela camada de negócio quando há uma violação das regras. As exceções devem ser personalizadas (ex: `ProdutoInvalidoException`, `EstoqueInsuficienteException`).
+
+### 3. **Camada de Dados (Estruturas de Dados em Memória) - 20 pontos**
+   - **Implementação das Estruturas de Dados (10 pontos)**: Os dados são corretamente gerenciados utilizando as estruturas de dados apropriadas (ex: `ArrayList`, `HashMap`). As operações de inserção, remoção, leitura e atualização funcionam adequadamente.
+   - **Organização e Simulação de Persistência (10 pontos)**: A camada de dados é bem estruturada e simula a persistência de forma organizada, separando claramente a lógica de acesso a dados das regras de negócio.
+
+### 4. **Separação em Camadas - 20 pontos**
+   - **Segregação Correta das Funções (10 pontos)**: A separação entre as camadas de apresentação, negócio e dados está clara, com cada uma desempenhando corretamente suas responsabilidades.
+   - **Comunicação Entre as Camadas (10 pontos)**: A comunicação entre as camadas é feita de maneira fluida e correta, utilizando métodos e estruturas apropriadas para transferir dados entre as camadas.
+
+### 5. **Boas Práticas - 10 pontos**
+   - **Boas Práticas de Programação (10 pontos)**: O código segue boas práticas, incluindo nomeação adequada de variáveis, métodos e classes, além de evitar duplicação de código e garantir uma organização clara do projeto.

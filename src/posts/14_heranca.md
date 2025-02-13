@@ -644,6 +644,33 @@ na classe `Servico`.
 
 ## Construtores e Herança
 
+### Construtor Padrão
+
+Em Java, toda classe herda implicitamente da classe `Object`, que é a superclasse raiz de todas as classes. A classe `Object` possui um **construtor padrão** (sem parâmetros), que é chamado automaticamente se nenhuma outra chamada ao construtor da superclasse for especificada.
+
+#### Exemplo do Construtor Padrão da Classe `Object`  
+Embora não seja visível diretamente, a classe `Object` contém um construtor público:
+
+```java
+public class Object {
+    public Object() {
+        // Construtor padrão vazio
+    }
+}
+```
+
+Quando criamos uma classe sem definir explicitamente um construtor, o compilador Java adiciona automaticamente um construtor sem argumentos que chama o construtor da superclasse:
+
+```java
+class MinhaClasse {
+    // Construtor padrão gerado implicitamente pelo compilador
+    public MinhaClasse() {
+        super(); // Chama o construtor da classe Object
+    }
+}
+```
+
+
 Quando temos uma hierarquia de classes, as chamadas dos construtores são mais complexas do que o normal. Pelo menos um construtor de cada classe de uma mesma sequência hierárquica deve ser chamado ao instanciar um objeto. Por exemplo, quando um objeto da classe Emprestimo é criado, pelo menos um construtor da própria classe Emprestimo e um da classe Servico devem ser executados. Além disso, os construtores das classes mais genéricas são chamados antes dos construtores das classes específicas.
 
 ```java
@@ -708,6 +735,81 @@ end ref
 </figure>
 
 
+### Construtores com Parâmetros  
+
+Construtores com parâmetros são utilizados para inicializar os atributos de um objeto no momento da criação. Se uma classe filha definir um construtor, ela deve chamar explicitamente o construtor da superclasse usando `super()` para garantir que a inicialização da classe base ocorra corretamente.
+
+#### Exemplo: Classe Pai e Classe Filha  
+
+```java
+// Classe Pai
+class Pessoa {
+    String nome;
+
+    // Construtor com parâmetro
+    public Pessoa(String nome) {
+        this.nome = nome;
+        System.out.println("Construtor da classe Pessoa chamado!");
+    }
+}
+
+// Classe Filha
+class Aluno extends Pessoa {
+    int matricula;
+
+    // Construtor da classe filha
+    public Aluno(String nome, int matricula) {
+        super(nome); // Chama o construtor da classe Pai (Pessoa)
+        this.matricula = matricula;
+        System.out.println("Construtor da classe Aluno chamado!");
+    }
+}
+
+// Classe Principal para Teste
+public class Main {
+    public static void main(String[] args) {
+        Aluno aluno = new Aluno("Carlos", 12345);
+    }
+}
+```
+
+#### Saída do Código:
+```
+Construtor da classe Pessoa chamado!
+Construtor da classe Aluno chamado!
+```
+
+### Por que a Classe Filha Deve Chamar `super()`?  
+
+1. **Inicialização Correta da Superclasse**  
+   - Como a classe `Aluno` herda de `Pessoa`, a parte referente a `Pessoa` precisa ser inicializada antes que os atributos específicos de `Aluno` sejam definidos.
+
+2. **Garantia de Consistência**  
+   - Se a classe `Pessoa` possui lógica importante no seu construtor (como validação de dados ou inicialização de recursos), essa lógica precisa ser executada antes que o objeto `Aluno` seja utilizado.
+
+3. **Evita Erros de Compilação**  
+   - Se a classe pai **não** tiver um construtor sem parâmetros e a classe filha **não** chamar explicitamente `super(args)`, o código não compilará.
+
+### O Que Acontece se `super()` Não For Chamado?  
+
+Se a classe `Pessoa` não tivesse um construtor padrão (sem parâmetros), o seguinte código geraria erro de compilação:
+
+```java
+class Aluno extends Pessoa {
+    int matricula;
+
+    // Erro: Pessoa(String) deve ser chamado explicitamente
+    public Aluno(int matricula) {
+        this.matricula = matricula;
+    }
+}
+```
+
+**Erro de compilação:**  
+
+> **"Constructor Pessoa in class Pessoa cannot be applied to given types"**  
+
+Isso acontece porque o Java sempre tenta chamar `super()` implicitamente **se nenhum construtor da superclasse for especificado**. Como `Pessoa` não tem um construtor padrão, o compilador não consegue encontrar um construtor adequado para ser chamado automaticamente.
 
 ## Referências
 
