@@ -6,6 +6,7 @@ tag:
 category:
   - exercicio
   - pratica
+  - entrega
 ---
 
 # Exercício de Herança 2
