@@ -5,6 +5,7 @@ tag:
   - heranca
 category:
   - exercicio
+  - pratica
 ---
 
 # Exercício de Herança 2
@@ -97,5 +98,10 @@ Neste exercício:
     ```
 1. Reescreva seu código, mantendo o mesmo comportamento, mas sem utilizar herança <s>(Será necessário alterar a classe `Principial`)</s>.
 
+## Entrega
+
+[Link](https://classroom.github.com/a/ZwdLgoym)
+
+## Referências 
 
 <!-- @include: ../../../bib/bib.md -->
