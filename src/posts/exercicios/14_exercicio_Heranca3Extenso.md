@@ -9,7 +9,7 @@ category:
 order: 13
 ---
 
-# Exercício: Converter para Extenso
+# Exercício Herança 3: Converter para Extenso
 
 Analisando o processo de conversão de um numero inteiro para o seu correspondente texto por extenso percebemos que existe muita coisa em comum quando são adicionados novos dígitos.
 
