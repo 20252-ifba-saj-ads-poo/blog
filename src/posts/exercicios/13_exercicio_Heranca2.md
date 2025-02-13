@@ -7,6 +7,7 @@ category:
   - exercicio
   - pratica
   - entrega
+order: 12
 ---
 
 # Exercício de Herança 2

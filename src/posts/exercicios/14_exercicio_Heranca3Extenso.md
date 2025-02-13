@@ -6,6 +6,7 @@ tag:
 category:
   - exercicio
   - entrega
+order: 13
 ---
 
 # Exercício: Converter para Extenso
