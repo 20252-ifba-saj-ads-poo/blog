@@ -1,6 +1,6 @@
 ---
 icon: edit
-date: 2025-06-02 19:30:00.00 -3
+date: 2025-02-06 19:30:00.00 -3
 tag:
   - heranca
 category:

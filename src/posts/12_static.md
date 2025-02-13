@@ -1,6 +1,6 @@
 ---
 icon: edit
-date: 2025-06-02 18:30:00.00 -3
+date: 2025-02-06 18:30:00.00 -3
 tag:
   - static
 category:
