@@ -1,9 +1,8 @@
 ---
 icon: list-check
 date: 2025-02-12 19:00:00.00 -3
-tag:
-  - trabalho
 category:
+  - trabalho
   - exercicio
   - entrega
 ---
@@ -11,6 +10,7 @@ category:
 # Parcial 1 do trabalho
 
 Entrgar a camada de modelo(código das classes ou digrama UML das classes) e o print das telas previstas para o sistema.
+
 
 
 ## Link

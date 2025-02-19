@@ -1,11 +1,10 @@
 ---
 icon: list-check
 date: 2024-12-11 19:00:00.00 -3
-tag:
-  - trabalho
 category:
   - exercicio
   - entrega
+  - trabalho
 ---
 
 # Divisão do trabalho

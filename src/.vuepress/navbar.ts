@@ -19,12 +19,17 @@ export default navbar([
   },
   {
     text: "Exercícios",
-    icon: "book",
+    icon: "dumbbell",
     link: "/category/exercicio/",
   },
   {
+    text: "Trabalho",
+    icon: "code-pull-request",
+    link: "/category/trabalho/",
+  },
+  {
     text: "Para Entrega",
-    icon: "book",
+    icon: "paper-plane",
     link: "/category/entrega/",
   },
   {
