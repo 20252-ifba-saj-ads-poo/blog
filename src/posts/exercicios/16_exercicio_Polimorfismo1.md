@@ -1,6 +1,6 @@
 ---
-icon: study
-date: 2024-08-21 19:00:00.00 -3
+icon: list-check
+date: 2025-02-20 19:00:00.00 -3
 tag:
   - heranca
   - polimorfismo
