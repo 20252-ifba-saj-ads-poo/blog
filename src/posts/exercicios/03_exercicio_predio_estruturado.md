@@ -1,5 +1,5 @@
 ---
-icon: list-check
+icon: dumbbell
 date: 2024-11-14 17:40:09.00 -3
 tag:
   - java

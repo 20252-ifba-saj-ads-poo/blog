@@ -1,5 +1,5 @@
 ---
-icon: list-check
+icon: code-pull-request
 date: 2025-02-12 19:00:00.00 -3
 category:
   - trabalho

@@ -1,5 +1,5 @@
 ---
-icon: list-check
+icon: code-pull-request
 date: 2024-12-11 19:00:00.00 -3
 category:
   - exercicio

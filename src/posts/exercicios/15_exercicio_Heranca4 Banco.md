@@ -1,5 +1,5 @@
 ---
-icon: list-check
+icon: dumbbell
 date: 2025-02-13 19:00:00.00 -3
 tag:
   - heranca
