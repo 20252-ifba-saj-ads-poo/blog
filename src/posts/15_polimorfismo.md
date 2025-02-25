@@ -396,4 +396,4 @@ Além disso, novos tipos de funcionários podem ser definidos sem a necessidade 
 
 ## Referências
 
-<!-- @include: ../bib/bib.md -->
+<!-- @include: ../../includes/bib.md -->
