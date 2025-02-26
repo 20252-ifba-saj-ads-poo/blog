@@ -4,13 +4,30 @@ import theme from "./theme.js";
 
 export default defineUserConfig({
   base: "/blog/",
+  head: [
+    // Adiciona o CSS do Codapi
+    [
+      "link",
+      {
+        rel: "stylesheet",
+        href: "https://unpkg.com/@antonz/codapi@0.19.10/dist/snippet.css",
+      },
+    ],
+    // Adiciona o script JavaScript do Codapi
+    [
+      "script",
+      {
+        src: "https://unpkg.com/@antonz/codapi@0.19.10/dist/snippet.js",
+      },
+    ],
+  ],
 
   lang: "pt-BR",
-  title: "20242 POO Blog das Aulas",
+  title: "20242 POO",
   description: "Material das Aulas",
 
-  extendsMarkdown: (md) => {    
-    md.use(umlPlugin, {openMarker: '```plantuml', closeMarker: '```'})
+  extendsMarkdown: (md) => {
+    md.use(umlPlugin, { openMarker: '```plantuml', closeMarker: '```' })
   },
 
 

@@ -15,5 +15,16 @@
 			"```"
 	 	],
 	 	"description": "java code snippet"
-	 }
+	 },
+	 "plantumlcode": {
+		"scope": "markdown",
+		"prefix": "plantuml",
+		"body": [
+			"```plantuml",
+			"$1",
+		   "```"
+		],
+		"description": "plantuml code snippet"
+	}
+
 }

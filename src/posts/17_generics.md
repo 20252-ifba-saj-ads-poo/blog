@@ -21,6 +21,7 @@ Por exemplo, você não pode atribuir uma String a uma variável do tipo int.
 
 @[code](./code/generics/tiposIncompativeis.java)
 
+
 A tipificação forte evita erros comuns, como tentar acessar métodos ou propriedades que não existem para um determinado tipo, reduzindo bugs e facilitando a depuração.
 
 Ao declarar explicitamente os tipos das variáveis, o código se torna mais legível e compreensível, pois fica claro quais dados estão sendo manipulados.
@@ -36,10 +37,13 @@ Antes dos generics, era comum usar Object para criar coleções ou classes que p
 
 @[code](./code/generics/ExemploObject.java)
 
+<codapi-snippet sandbox="java" editor="basic"></codapi-snippet>
 
 Com generics, podemos criar coleções ou classes que trabalham com tipos específicos, eliminando a necessidade de casts e garantindo segurança de tipo em tempo de compilação.
 
 @[code](./code/generics/ExemploGenerics.java)
+
+<codapi-snippet sandbox="java" editor="basic"></codapi-snippet>
 
 ### Comparativo
 
@@ -57,14 +61,9 @@ Com generics, podemos criar coleções ou classes que trabalham com tipos espec�
 
 @[code](./code/generics/GenericsTest.java)
 
-Saída:
 
-```shell
-Value of the item: Test String.
-Type of the item: java.lang.String
-Value of the item: 100
-Type of the item: java.lang.Integer
-```
+<codapi-snippet sandbox="java" editor="basic"></codapi-snippet>
+
 
 #### Exemplo de classe com Generics com dois parâmetros:
 
@@ -161,3 +160,5 @@ CalculadoraArea<String> calculadoraInvalida = new CalculadoraArea<>("Texto");
 ## Referências
 
 <!-- @include: ../../includes/bib.md -->
+
+

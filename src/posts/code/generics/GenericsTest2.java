@@ -1,3 +1,12 @@
+public class GenericsTest {
+    public static void main(String args[]){
+        //String type test
+        Test<String, Integer> test =
+          new Test<String, Integer>("Test String.", 100);
+        test.showItemDetails();
+    }
+}
+
 class Test<T, U> {
     private T itemT;
     private U itemU;
@@ -31,12 +40,4 @@ class Test<T, U> {
     }
   }
   
-  public class GenericsTest {
-      public static void main(String args[]){
-          //String type test
-          Test<String, Integer> test =
-            new Test<String, Integer>("Test String.", 100);
-          test.showItemDetails();
-      }
-  }
   
