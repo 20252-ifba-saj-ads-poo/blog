@@ -5,6 +5,7 @@ tag:
   - java
 category:
   - exercicio
+star: true
 order: 9
 ---
 
