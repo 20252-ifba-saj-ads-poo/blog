@@ -19,6 +19,33 @@ order: 16
 - Uma classe abstrata possui características que devem/podem ser implementadas por classes filhas
 - Os métodos abstratos são obrigatoriamente implementados pelas classes filhas concretas, quando a mesma herda de uma classe abstrata. 
 
+<figure>
+
+```plantuml
+
+@startuml
+abstract class Figura{
+    desenhar()
+}
+class Circulo{
+    desenhar()
+}
+class Retangulo{
+    desenhar()
+}
+class Quadrado extends Retangulo{
+    desenhar()
+}
+Figura <|-- Circulo
+Figura <|-- Retangulo
+
+@enduml
+```
+
+<figcaption>A classe figura não faz sentido gerar uma instancia.</figcaption>
+</figure>
+
+
 ```java
 public abstract class Pessoa { 
     int matricula; 
