@@ -134,15 +134,23 @@ Isso demonstra como os generics ajudam a evitar erros em tempo de compilação.
 
 O uso de `T extends` em generics permite restringir o tipo genérico `T` a uma classe ou interface específica, garantindo que apenas subtipos dessa classe ou interface possam ser usados. Isso é útil para impor limites aos tipos aceitos e acessar métodos ou propriedades específicas da classe ou interface.
 
-Imagine que no exemplo anterior, alguem defina um novo veículo como o exibido abaixo:
+Imagine que no exemplo anterior, alguém defina um novo veículo como o exibido abaixo:
 
 @[code](./code/generics/Pop.java)
 
 Faz sentido ter um veículo com um Motor `Interger`?
 
-É possivel fazer uma restrição para que todos os tipos definidos para o generico sejam filhos de `Motor`, por exemplo.
+É possível fazer uma restrição para que todos os tipos definidos para o genérico sejam filhos de `Motor`, por exemplo.
+
+@[code](./code/generics/extends/Motor.java)
+@[code{1}](./code/generics/extends/MotorCombustao.java)
+@[code{1}](./code/generics/extends/MotorEletrico.java)
+@[code{1}](./code/generics/extends/Veiculo.java)
+
+Com essa restrição, a classe `Pop` não poderia ser compilada já que `Integer` não herda de `Motor`
 
 
+### Outro Exemplo
 
 
 @[code](./code/generics/FormaGeometrica.java)

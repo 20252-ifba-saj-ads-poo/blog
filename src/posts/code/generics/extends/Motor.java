@@ -1,3 +1,2 @@
-public class Motor {
-    
+public class Motor {    
 }
