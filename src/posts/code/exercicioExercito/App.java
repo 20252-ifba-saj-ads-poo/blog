@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 import java.util.Objects;
 
@@ -68,7 +69,7 @@ class Cabo {
     private String nome;
     private int tempoServico;
     private static int quantidaCabo = 0;
-    private List<Soldado> subordinados;
+    private Collection<Soldado> subordinados;
 
     public Cabo(String nome, int tempoServico) {
         this.nome = nome;

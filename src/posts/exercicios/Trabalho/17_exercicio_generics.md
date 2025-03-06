@@ -70,7 +70,7 @@ public class GenericDAOImpl<T extends AbstractModel<ID>, ID> implements GenericD
     private Map<ID, T> bancoDeDados = new HashMap<>();
     private final Class<ID> tipoIdClass; 
 
-    public GenericDAO(Class<ID> tipoIdClass) {
+    public GenericDAOImpl(Class<ID> tipoIdClass) {
         this.tipoIdClass = tipoIdClass;
     }
     
