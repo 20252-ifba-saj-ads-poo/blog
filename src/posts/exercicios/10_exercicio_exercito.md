@@ -15,3 +15,14 @@ Modele uma simplificação da hierarquia do Exército Brasileiro. Existem difere
    
 [Entrega](https://classroom.github.com/a/akv_sYWI)
 
+   
+     
+   
+   ::: details 
+   
+   @[code](../code/exercicioExercito/App.java)
+   <codapi-snippet sandbox="java" editor="basic"></codapi-snippet>
+
+   ::: 
+  
+   
