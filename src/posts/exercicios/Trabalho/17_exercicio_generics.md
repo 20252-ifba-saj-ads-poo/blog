@@ -80,7 +80,7 @@ public class GenericDAOImpl<T extends AbstractModel<ID>, ID> implements GenericD
       entidade.setId(novoId); 
       entidade.setCreatedAt(LocalDateTime.now());
       bancoDeDados.put(entidade.getId(), entidade);
-      return novoId
+      return novoId;
     }
     
     @Override
