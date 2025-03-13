@@ -1,5 +1,5 @@
 ---
-icon: study
+icon: dumbbell
 date: 2025-03-13 19:01:00.00 -3
 tag:
   - exception

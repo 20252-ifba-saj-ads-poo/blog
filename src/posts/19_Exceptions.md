@@ -11,7 +11,7 @@ order: 19
 
 Considerando o que foi visto em [Pilha de execução](./03_Codificando_JAVA.md#pilha-de-execucao).
 
-Quando um erro (exceção) ocorre, o JVM entra em estado de alerta e procura dento do metodo se existe algum tratamento especial para o problema.
+Quando um exceção (situação excepcional) ocorre, o JVM entra em estado de alerta e procura dento do metodo se existe algum tratamento especial para o problema.
 
 @[code](./code/exception/TesteErro.java)
 
@@ -191,6 +191,33 @@ public void metodo() throws TipoExcecao1, TipoExcecao2 {
 }
 ```
 :::
+
+```java
+package exceptions.connection;
+
+import java.sql.Connection;
+import java.sql.SQLException;
+
+public class DAO {
+    Connection connection;
+    public DAO() {
+        this.connection = new ConnectionFactory().getConnection();
+    }
+    public void save(String sql) {
+            try {
+                this.connection.prepareStatement(sql).execute();
+                connection.close();
+            } catch (SQLException e) {
+                // mandar mensagem para equipe de desenvolvimento
+                e.printStackTrace();
+            }
+            catch (Exception e) {
+                // mandar mensagem para equipe de infra
+                e.printStackTrace();
+            }
+    }
+}
+```
 
 Não há uma regra para decidir em que momento do seu programa deve ser feito o tratamento da exceção. Essa decisão depende de como a exceção será tratada e em que ponto é possivel fazer algo a respeito. Enquanto não for o momento, provavelmente será melhor delegar a responsabilidade para o método que invocou. Lembrando que: caso o tratamento não seja feito por nenhum código quem irá tratar é a JVM.
 
