@@ -74,3 +74,12 @@ article:false
 [^DEVMEDIA_ASSYNC]:Processamento assíncrono em Java com Future e FutureTask [https://www.devmedia.com.br/processamento-assincrono-em-java-com-future-e-futuretask/33851](https://www.devmedia.com.br/processamento-assincrono-em-java-com-future-e-futuretask/33851)
 
 [^CodeGymQueue]:Java Queue Interface e suas implementações [https://codegym.cc/pt/groups/posts/pt.307.java-queue-interface-e-suas-implementacoes](https://codegym.cc/pt/groups/posts/pt.307.java-queue-interface-e-suas-implementacoes). 
+
+
+
+
+[^devparalelismo]:Implementando Paralelismo com Virtual Threads no Java 21? [https://dev.to/cassunde/implementando-paralelismo-com-virtual-threads-no-java-21-3om8](https://dev.to/cassunde/implementando-paralelismo-com-virtual-threads-no-java-21-3om8).
+
+
+[^Coffeeandtips]:Explorando Virtual Threads no Java 21 [https://www.coffeeandtips.com/post/explorando-virtual-threads-no-java-21](https://www.coffeeandtips.com/post/explorando-virtual-threads-no-java-21).
+virtual-threads

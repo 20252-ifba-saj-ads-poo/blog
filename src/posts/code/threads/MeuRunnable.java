@@ -7,7 +7,7 @@ public class MeuRunnable implements Runnable {
 
     @Override
     public void run() {
-        for(int x=0;x<1000000;x++){ 
+        for(int x=0;x<1000;x++){ 
             System.out.println(Thread.currentThread().toString()+"Runnable "+id+": "+x); 
         } 
     }    

@@ -3,23 +3,25 @@ import java.util.concurrent.TimeUnit;
 public class Conta {
     protected int saldo = 0;
 
-    public void deposita(int valor){
+    public void deposita(int valor) {
         try {
             TimeUnit.MILLISECONDS.sleep(1);
-            saldo += valor;
+            int novoSaldo = saldo;
+            novoSaldo = saldo + valor;
+            saldo = novoSaldo;
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
     }
 
-    public void saca(int valor){
-        if(saldo >= valor){
+    public void saca(int valor) {
+        if (saldo >= valor) {
             try {
                 TimeUnit.MILLISECONDS.sleep(1);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-            saldo -=valor;
+            saldo -= valor;
         }
     }
 
@@ -30,4 +32,5 @@ public class Conta {
     public void setSaldo(int saldo) {
         this.saldo = saldo;
     }
+
 }

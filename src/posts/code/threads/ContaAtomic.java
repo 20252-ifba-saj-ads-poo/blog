@@ -2,32 +2,37 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class ContaAtomic extends Conta {
-    protected AtomicInteger saldo = new AtomicInteger();
+    protected AtomicInteger saldoAtomico;
 
-    public void deposita(int valor){
-        try {
-            TimeUnit.MILLISECONDS.sleep(1);
-            saldo.addAndGet(valor);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+    public ContaAtomic() {
+        setSaldo(0);
     }
 
-    public synchronized void  saca(int valor){
-        if(saldo.get() >= valor){
-            try {
-                TimeUnit.MILLISECONDS.sleep(1);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
+    public void deposita(int valor) {
+        saldoAtomico.addAndGet(valor);
+    }
+
+    public void saca(int valor) {
+        saldoAtomico.getAndUpdate(saldoAtual -> {
+            if (saldoAtual >= valor) {
+                return saldoAtual - valor;
             }
-            saldo.addAndGet(valor*-1);
-        }
+            return saldoAtual; // Não altera se não tiver saldo suficiente
+        });
     }
 
     public int getSaldo() {
-        return saldo.get();
+        return saldoAtomico.get();
     }
+
+    @Override
     public void setSaldo(int saldo) {
-        this.saldo.set(saldo);
+        // Evitar criar nova instância se já existir
+        if (this.saldoAtomico == null) {
+            this.saldoAtomico = new AtomicInteger(saldo);
+        } else {
+            this.saldoAtomico.set(saldo);
+        }
     }
+
 }
