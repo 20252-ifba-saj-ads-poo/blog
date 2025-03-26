@@ -35,6 +35,11 @@ A entrega do projeto deverá ser realizada através do seguinte link:
 
 [Sistema para Submissão](https://classroom.github.com/a/IbWSqz_e)
 
+::: warning
+A data de entrega é : **09/04/2025 até às 17:39**
+Entregas após esse horário não serão aceitas pelo repositório do GitHub.
+:::
+
 Sugiro que cada nova modificação no código deva ser commitada e enviada para o repositório do GitHub. 
 
-O historial de alterações do repositório servirá como evidência do processo de desenvolvimento e evolução do projeto. 
+O histórico de alterações do repositório servirá como evidência do processo de desenvolvimento e evolução do projeto. 
