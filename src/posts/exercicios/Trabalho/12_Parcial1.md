@@ -9,7 +9,7 @@ category:
 
 # Parcial 1 do trabalho
 
-Entrgar a camada de modelo(código das classes ou digrama UML das classes) e o print das telas previstas para o sistema.
+Entregar a camada de modelo(código das classes ou digrama UML das classes) e o print das telas previstas para o sistema.
 
 
 

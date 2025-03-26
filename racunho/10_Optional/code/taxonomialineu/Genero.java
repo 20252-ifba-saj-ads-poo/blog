@@ -9,6 +9,9 @@ public class Genero {
         this.nome = nome;
         this.familia = familia;
     }
+    public String getNome() {
+        return nome;
+    }
     @Override
     public String toString() {
         return Optional.ofNullable(familia).orElse(new Familia("", null)).toString()+"\nGenero "+ nome;

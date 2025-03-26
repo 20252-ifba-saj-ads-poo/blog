@@ -25,6 +25,12 @@
 		   "```"
 		],
 		"description": "plantuml code snippet"
-	}
+	},
+	"run": {
+	   "scope": "markdown",
+	   "prefix": "run",
+	   "body": ["<codapi-snippet sandbox=\"java\" editor=\"basic\"></codapi-snippet>"],
+	   "description": "run java code"
+   }
 
 }

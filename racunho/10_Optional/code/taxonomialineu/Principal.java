@@ -12,7 +12,7 @@ public class Principal {
         Genero genero = new Genero("Homo", familia);
         Especie especie = new Especie("Homo sapiens ", genero);
 
-        System.out.println(especie);   
+        System.out.println(especie.get);   
         
         
     }
