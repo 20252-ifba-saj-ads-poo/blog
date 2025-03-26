@@ -15,7 +15,7 @@ order: 22
 
 [^DEVMEDIA_ASSYNC]
 
-Além da classe `Thread` e a interface `Runnable` para a programação de eventos assíncronos O java adicionou as classes FutureTaks`, `Future` e `Callable`, que tem mais ou menos a mesma função das anteriores, mas facilitam bastante o desenvolvimento de aplicações paralelas.
+Além da classe `Thread` e a interface `Runnable` para a programação de eventos assíncronos, o java adicionou as classes `FutureTaks`, `Future` e `Callable`, que tem mais ou menos a mesma função das anteriores, mas facilitam bastante o desenvolvimento de aplicações paralelas.
 
 - **Future**: Classe que encapsula uma chamada feita em paralelo, sendo possível cancelar a execução de uma tarefa, descobrir se a execução já terminou com sucesso ou erro, entre outras operações;
 - **FutureTask**: É uma implementação da interface Future a ser executada numa chamada em paralelo. Além disso, com ela é possível fazer as mesmas verificações que fazemos com a interface;
@@ -191,14 +191,12 @@ public class Exemplo1Soma {
     && futureT3.isDone()) {
           System.out.println("As tarefas ainda não foram
           processadas!");
-          Thread.sleep(1); // sleep for 1 millisecond
-          before checking again
+          Thread.sleep(1); // sleep for 1 millisecond before checking again
     }
     System.out.println("Tarefa completa!");
     long valor = futureT1.get();
     valor = valor + futureT2.get() + futureT3.get();
-    System.out.println("A soma dos valores gerados são:
-    " + valor);
+    System.out.println("A soma dos valores gerados são: " + valor);
     threadpool.shutdown();
   }
 
@@ -394,153 +392,6 @@ public class Cliente {
 }
 
 ```
-
-## Atomic Classes
-
-- As classes AtomicInteger, AtomicLong, AtomicBoolean e AtomicReference são classes que fornecem operações atômicas para tipos primitivos e referências de objetos.
-
-### Como Eliminar o synchronized do Método saca()
-Para eliminar a necessidade do modificador `synchronized` no método `saca()` da classe `ContaAtomic`, você precisa garantir que a verificação do saldo e a operação de subtração sejam realizadas de forma atômica. Existem algumas abordagens:
-
-1. Usando `compareAndSet` ou `updateAndGet`
-    
-    ```java
-
-    public void saca(int valor) {
-        // Tenta realizar a operação até conseguir
-        boolean sucesso = false;
-        while (!sucesso && saldo.get() >= valor) {
-            int saldoAtual = saldo.get();
-            if (saldoAtual >= valor) {
-                try {
-                    TimeUnit.MILLISECONDS.sleep(1);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-                // Tenta atualizar o saldo apenas se ele ainda for igual ao valor lido
-                sucesso = saldo.compareAndSet(saldoAtual, saldoAtual - valor);
-            } else {
-                // Saldo insuficiente
-                break;
-            }
-        }
-    }
-    ```
-
-    ```java
-    public void saca(int valor) {
-        saldo.updateAndGet(saldoAtual -> {
-            if (saldoAtual >= valor) {
-                try {
-                    TimeUnit.MILLISECONDS.sleep(1);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-                return saldoAtual - valor;
-            }
-            return saldoAtual; // Não altera se não tiver saldo suficiente
-        });
-    }
-    ```
-
-
-1. Usando `getAndUpdate`
-    ```java
-    public void saca(int valor) {
-        saldo.getAndUpdate(saldoAtual -> {
-            if (saldoAtual >= valor) {
-                try {
-                    TimeUnit.MILLISECONDS.sleep(1);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-                return saldoAtual - valor;
-            }
-            return saldoAtual; // Não altera se não tiver saldo suficiente
-        });
-    }
-    ```
-
-
-1. Usando `accumulateAndGet`
-    ```java
-    public void saca(int valor) {
-        saldo.accumulateAndGet(valor, (saldoAtual, valorASacar) -> {
-            if (saldoAtual >= valorASacar) {
-                try {
-                    TimeUnit.MILLISECONDS.sleep(1);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-                return saldoAtual - valorASacar;
-            }
-            return saldoAtual; // Não altera se não tiver saldo suficiente
-        });
-    }
-
-    ```
-
-### Explicação
-Todas essas abordagens usam operações atômicas do `AtomicInteger` que combinam a verificação e a atualização em uma única operação indivisível, eliminando a necessidade do `synchronized`.
-
-O método `compareAndSet` verifica se o valor atual é igual ao esperado e, se for, atualiza para um novo valor. Tudo isso de forma atômica.
-
-Os métodos `updateAndGet`, `getAndUpdate` e `accumulateAndGet` aplicam uma função ao valor atual e atualizam o valor, também, em uma única operação atômica.
-
-Estas soluções são mais eficientes que usar `synchronized` porque:
-
-- Evitam bloqueios desnecessários
-- Permitem maior concorrência
-- Usam instruções de hardware otimizadas (CAS - Compare-And-Swap)
-
-### Outro exemplo de uso de Atomic
-
-```java
-import java.util.UUID;
-import java.util.concurrent.atomic.AtomicLong;
-
-public class IdGenerator {
-
-    // Contador atômico para IDs numéricos
-    // Garante que a geração de IDs seja thread-safe (segura para uso em ambientes multithread) e evita conflitos ao gerar IDs sequenciais.
-    private static final AtomicLong contador = new AtomicLong(0);
-
-    /**
-     * Gera um novo ID com base no tipo genérico T.
-     * Se T for Number, retorna um valor sequencial atômico.
-     * Se T for UUID, gera um novo UUID.
-     *
-     * @param tipoClasse A classe do tipo genérico T.
-     * @return Um novo ID do tipo T.
-     */
-    @SuppressWarnings("unchecked")
-    public static <T> T gerarNovoId(Class<T> tipoClasse) {
-        if (Number.class.isAssignableFrom(tipoClasse)) {
-            // Se T for um subtipo de Number, usa reflexão para criar uma instância
-            try {
-                // Obtém o construtor que recebe um long como parâmetro
-                Constructor<T> construtor = tipoClasse.getConstructor(long.class);
-                // Cria uma nova instância usando o valor do contador atômico
-                return construtor.newInstance(contador.incrementAndGet());
-            } catch (Exception e) {
-                throw new RuntimeException("Falha ao gerar ID para o tipo: " + tipoClasse.getSimpleName(), e);
-            }
-        } else if (tipoClasse == UUID.class) {
-            // Se T for UUID, gera um novo UUID
-            return (T) UUID.randomUUID();
-        }
-
-        throw new IllegalArgumentException("Tipo de ID não suportado: " + tipoClasse.getSimpleName());
-    }
-}
-```
-
-
-## Virtual threads
-
-[https://dev.to/cassunde/implementando-paralelismo-com-virtual-threads-no-java-21-3om8](https://dev.to/cassunde/implementando-paralelismo-com-virtual-threads-no-java-21-3om8)
-
-[https://www.coffeeandtips.com/post/explorando-virtual-threads-no-java-21](https://www.coffeeandtips.com/post/explorando-virtual-threads-no-java-21)
 
 # Links w3schools
 

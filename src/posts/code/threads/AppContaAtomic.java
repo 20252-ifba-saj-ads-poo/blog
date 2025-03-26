@@ -16,7 +16,7 @@ public class AppContaAtomic {
         ContaAtomic contaAtomic = new ContaAtomic();
         final int NUM_THREADS = 1000000;
         
-        LOGGER.info("Tesando Saque com ContaAtomic");
+        LOGGER.info("Testando Saque com ContaAtomic");
         LOGGER.info("Criando e iniciando as threads");
         processaMultiplos(contaAtomic, NUM_THREADS, () -> {
                 contaAtomic.saca(100);

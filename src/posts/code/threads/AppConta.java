@@ -26,10 +26,15 @@ public class AppConta {
         Thread.sleep(2000);
         LOGGER.info("conta saldo:" + conta.getSaldo());
         LOGGER.info("contaSynchronized saldo:" + contaSynchronized.getSaldo());
+        Thread.sleep(2000);
+        LOGGER.info("contaSynchronized saldo:" + contaSynchronized.getSaldo());
+        Thread.sleep(2000);
+        LOGGER.info("contaSynchronized saldo:" + contaSynchronized.getSaldo());
+        Thread.sleep(2000);
+        LOGGER.info("contaSynchronized saldo:" + contaSynchronized.getSaldo());
     }
 
     private static void testaSacaConta(Conta conta) {
-        conta.deposita(300);
         IntStream.rangeClosed(1, 1000000).forEach(i -> {
             Thread.startVirtualThread(() -> {
                 conta.saca(100);

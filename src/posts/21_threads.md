@@ -264,6 +264,12 @@ Para eliminar a necessidade do modificador `synchronized` no método `saca()` da
 
     ```
 
+#### Exemplo conta atomic
+
+@[code](./code/threads/ContaAtomic.java)
+
+@[code](./code/threads/AppContaAtomic.java)
+
 ### Explicação
 Todas essas abordagens usam operações atômicas do `AtomicInteger` que combinam a verificação e a atualização em uma única operação indivisível, eliminando a necessidade do `synchronized`.
 
@@ -343,8 +349,12 @@ As threads virtuais são criadas usando a classe `Thread` do Java, mas com um pa
 
 As threads virtuais são criadas usando o método `start()` da classe `Thread`, da mesma forma que as threads tradicionais. Porém, ao criar uma thread virtual, é necessário especificar o tipo de thread usando o método `ofVirtual()`. Por exemplo:
 
+### Exemplo de uso
 
 ```java
+Thread.startVirtualThread(() -> {
+    // Código da thread            
+});
 Thread thread = Thread.ofVirtual().start(() -> {
     // Código da thread
 }
@@ -357,7 +367,6 @@ Runnable runnable = new MinhaRunnable();
 Thread thread = Thread.ofVirtual().start(runnable);
 ```
 
-### Exemplo de uso
 
 
 
