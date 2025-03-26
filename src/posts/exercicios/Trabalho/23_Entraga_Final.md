@@ -5,6 +5,7 @@ category:
   - trabalho
   - exercicio
   - entrega
+order: 1
 ---
 
 # Entrega Final do Projeto
