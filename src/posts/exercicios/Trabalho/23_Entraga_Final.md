@@ -7,35 +7,6 @@ category:
   - entrega
 ---
 
-# Entrega Final do trabalho
-
-Realizar a entrega final, com o código limpo, do trabalho seguindo o descrito na [Estrutura](../../11_Trabalho.md) e no que foi definido para cada [equipe](./equipes.md) conforme [lista de exercício](../09_exercicio_modelagem_listas.md)
-
-
-Para cada equipe será definido pelo menos uma regra de negócio que deverá ser tratada como uma `Exception`. 
-
-O lançamento de exceção deve ser feito na camada e validação (negócio) e capturada na camada de apresentação (Controller do javaFX). Como descrito na [Estrutura](../../11_Trabalho.md)
-
-
-
-
-## Link
-[Entrega](https://classroom.github.com/a/j3DkLP8S)
-
-
-
-
-
-
----
-icon: code-pull-request
-date: 2025-03-26 19:00:00.00 -3
-category:
-  - trabalho
-  - exercicio
-  - entrega
----
-
 # Entrega Final do Projeto
 
 ## Objetivo
