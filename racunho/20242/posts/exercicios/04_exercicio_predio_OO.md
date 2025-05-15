@@ -18,4 +18,4 @@ order: 4
 
 ## Exemplo
 
-[Link repositório](https://github.com/20242-ifba-saj-ads-poo/javafx-predio)
+[Link repositório](https://github.com/20251-ifba-saj-ads-poo/javafx-predio)

@@ -57,7 +57,7 @@ Clique com o lado direita do mouse e escolha a opção `Open in Scene Builder`
 
 Construa uma tela de cadastro e entregue no [link](https://classroom.github.com/a/W-n-g7BT)
 
-[Exemplo](https://github.com/20242-ifba-saj-ads-poo/exercicio-03-javafx-tela-cadastro-leandro-costa)
+[Exemplo](https://github.com/20251-ifba-saj-ads-poo/exercicio-03-javafx-tela-cadastro-leandro-costa)
 
 
 ## JavaFX Login Page
@@ -72,8 +72,8 @@ Construa uma tela de cadastro e entregue no [link](https://classroom.github.com/
 
 ## Repositórios templates
 
-- [Step 1](https://github.com/20242-ifba-saj-ads-poo/javafx-template-step1)
-- [Step 2](https://github.com/20242-ifba-saj-ads-poo/javafx-template-step2)
+- [Step 1](https://github.com/20251-ifba-saj-ads-poo/javafx-template-step1)
+- [Step 2](https://github.com/20251-ifba-saj-ads-poo/javafx-template-step2)
 
 
 ## JavaFX 
