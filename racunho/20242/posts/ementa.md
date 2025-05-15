@@ -1,6 +1,6 @@
 ---
 icon: edit
-date: 2025-05-15 17:40:00.00 -3
+date: 2024-11-06 17:40:00.00 -3
 tag:
   - ementa
 category:
