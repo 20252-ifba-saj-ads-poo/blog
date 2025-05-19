@@ -19,8 +19,7 @@ Na convenção de nomes da linguagem Java, os nomes das variáveis devem seguir 
 
 ## Declarando e usando variáveis
 
-Dentro de um bloco, podemos declarar variáveis e usá-las. Em Java, toda variável tem um tipo que não pode
-ser mudado, uma vez que declarado:
+Dentro de um bloco, podemos declarar variáveis e usá-las. Em Java, toda variável tem um tipo que não pode ser mudado, uma vez que declarado:
 
 ```java
 tipoDaVariavel nomeDaVariavel;
