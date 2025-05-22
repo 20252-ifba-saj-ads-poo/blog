@@ -551,7 +551,7 @@ Veja um exemplo de leitura do teclado com a classe Scanner:
 ```java
 import java.util.Scanner;
 
-public class TestaDeclaracaoScanner {
+public class Main {
   public static void main(String[] args) {
     //Lê a partir da linha de comando
     Scanner teclado = new Scanner(System.in);
@@ -579,17 +579,14 @@ public class TestaDeclaracaoScanner {
 
     System.out.printf("Informe uma palavra simples:\n");
     s = teclado.next();
+    //	Na leitura consecutiva de valores e String deve-se esvaziar o buffer do teclado antes da leitura do valor String, por exemplo:
+    s = teclado.nextLine();
     
     //	Lendo uma String, usado na leitura de palavras compostas, por exemplo, Pato Branco:
-    String s;
-
     System.out.printf("Informe uma cadeia de caracteres:\n");
     s = teclado.nextLine();
     
     //	Na leitura consecutiva de valores numéricos e String deve-se esvaziar o buffer do teclado antes da leitura do valor String, por exemplo:
-    int n;
-    String s;
-
     System.out.printf("Informe um Número Inteiro: ");
     n = teclado.nextInt();
 
@@ -600,7 +597,11 @@ public class TestaDeclaracaoScanner {
     
   }
 }
+
 ```
+<codapi-snippet sandbox="java" editor="basic"></codapi-snippet>
+
+[Veja Rodando](https://ifba-saj-poo.neetocode.com/leandro-costa-souza/01JVX2EHYM3424A13BHNSWPAD0)
 
 ### JOptionPane
 
