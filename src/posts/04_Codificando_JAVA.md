@@ -117,8 +117,7 @@ int j = i; // j recebe uma cópia do valor de i
 i = i + 1; // i vira 6, j continua 5
 ```
 
-Aqui, `i` fica com o valor de `6`. Mas e `j`? Na segunda linha, `j` está valendo `5`. Quando `i` passa a valer `6`, será
-que `j` também muda de valor? Não, pois o valor de um tipo primitivo sempre é copiado.
+Aqui, `i` fica com o valor de `6`. Mas e `j`? Na segunda linha, `j` está valendo `5`. Quando `i` passa a valer `6`, será que `j` também muda de valor? Não, pois o valor de um tipo primitivo sempre é copiado.
 
 Apesar da linha `2` fazer `j = i`, a partir desse momento essas variáveis não tem relação nenhuma: o que acontece com uma, não repete em nada com a outra
 
@@ -140,6 +139,7 @@ if (idade < 18) {
 ```
 
 Além disso, você pode usar a cláusula else para indicar o comportamento que deve ser executado no caso da expressão booleana ser falsa:
+
 ```java
 int idade = 15;
 if (idade < 18) {
@@ -151,6 +151,7 @@ if (idade < 18) {
 Você pode concatenar expressões booleanas através dos operadores lógicos "E" e "OU". O "E" é representado pelo `&&` e o "OU" é representado pelo `||`.
 
 Um exemplo seria verificar se ele tem menos de 18 anos e se ele não é amigo do dono:
+
 ```java
 int idade = 15;
 boolean amigoDoDono = true;
@@ -176,6 +177,7 @@ if (idade < 18 && !amigoDoDono) {
 Perceba na linha 3 que o trecho `amigoDoDono == false` virou `!amigoDoDono`. Eles têm o mesmo valor.
 
 Para comparar se uma variável tem o mesmo valor que outra variável ou valor, utilizamos o operador `==`. Perceba que utilizar o operador `=` dentro de um `if` vai retornar um erro de compilação, já que o operador `=` é o de atribuição.
+
 ```java
 int mes = 1;
 if (mes == 1) {
@@ -208,8 +210,7 @@ while (i < 10) {
 Já o while acima imprime de 0 a 9.
 
 ### O For
-Outro comando de loop extremamente utilizado é o for. A ideia é a mesma do while: fazer um trecho de código ser repetido enquanto uma condição continuar verdadeira. Mas além disso, o for isola também um espaço para inicialização de variáveis e o modificador dessas variáveis. Isso faz com que fiquem mais legíveis,
-as variáveis que são relacionadas ao loop:
+Outro comando de loop extremamente utilizado é o for. A ideia é a mesma do while: fazer um trecho de código ser repetido enquanto uma condição continuar verdadeira. Mas além disso, o for isola também um espaço para inicialização de variáveis e o modificador dessas variáveis. Isso faz com que fiquem mais legíveis, as variáveis que são relacionadas ao loop:
 
 ```java
 for (inicializacao; condicao; incremento) {
@@ -235,12 +236,12 @@ while (i < 10) {
 }
 ```
 
-
 Porém, o código do for indica claramente que a variável `i` serve, em especial, para controlar a quantidade de laços executados. Quando usar o for? Quando usar o while? Depende do gosto e da ocasião.
 
 ### Controlando loops
 
 Apesar de termos condições booleanas nos nossos laços, em algum momento, podemos decidir parar o loop por algum motivo especial sem que o resto do laço seja executado.
+
 ```java
 int x = 100;
 int y = 200;    
@@ -297,6 +298,7 @@ while (condicao) {
 No bloco acima, a variável `j` para de existir quando termina o bloco onde ela foi declarada. Se você tentar acessar uma variável fora de seu escopo, ocorrerá um erro de compilação.
 
 O mesmo vale para um if:
+
 ```java
 if (algumBooleano) {
     int i = 5;
@@ -319,6 +321,7 @@ System.out.println(i);
 ```
 
 Uma situação parecida pode ocorrer com o for:
+
 ```java 
 for (int i = 0; i < 10; i++) {
     System.out.println("olá!");
@@ -603,14 +606,11 @@ public class TestaDeclaracaoScanner {
 
 [^Bacala]
 
-
-
 - Até agora vimos o método `System.out.println` para escrever informações na tela (console).
 - A linguagem Java oferece diversas formas de interação com o usuário, a grande maioria em janelas.
 - Para evitar a criação de uma interface completa, pode-se utilizar as chamadas caixas de diálogo. 
 
 - JOptionPane Oferece caixas de diálogo predefinidas que permitem aos programas exibir mensagens aos usuários;
-
 
 - exibir uma caixa de mensagem para informar o usuário, usamos o método showMessageDialog(...): 
 
