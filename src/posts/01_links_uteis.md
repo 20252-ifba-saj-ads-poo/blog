@@ -64,17 +64,37 @@ Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression
 ```
 Para instalar o scoop abra o PowerShell e rode o seguinte comando:
 
+Add git
 
 ```console
-scoop bucket add main
 scoop install main/git
-scoop install main/gh
+```
+Add maven
+
+```console
+scoop install main/maven
+```
+
+Add java
+```console
 scoop bucket add java
 scoop install java/temurin-lts-jdk
-scoop install main/maven
+```
+
+Add Scene Builder
+```console
 scoop bucket add extras
 scoop install extras/scene-builder
-scoop install extras/vscode
+```
+
+add github desktop
+```console
+scoop install extras/github
+```
+
+add gh
+```console
+scoop install main/gh
 ```
 
 
