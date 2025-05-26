@@ -115,7 +115,7 @@ sdk install java 21-tem
 ```
 
 ```console
-sdk install java maven
+sdk install maven
 ```
 
 Seguir o tutorial de ![install Scene Builder](https://gist.github.com/raimonizard/81e5ff28dde067b9db6735ef4428a29c)
