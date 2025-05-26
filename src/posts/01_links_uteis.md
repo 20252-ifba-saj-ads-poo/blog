@@ -88,4 +88,14 @@ para instalar
 curl -s "https://get.sdkman.io" | bash
 ```
 
+Abrir um novo terminal e rodar:
+
+```console
+sdk install java 21-tem
+```
+
+```console
+sdk install java maven
+```
+
 
