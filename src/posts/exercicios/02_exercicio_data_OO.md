@@ -1,6 +1,6 @@
 ---
 icon: dumbbell
-date: 2024-11-27 17:40:00.00 -3
+date: 2025-06-02 18:10:00.00 -3
 tag:
   - java
 category:
