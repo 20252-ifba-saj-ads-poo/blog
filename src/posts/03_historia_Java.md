@@ -6,7 +6,7 @@ tag:
   - paradigmas
 category:
   - aula
-order: 2
+order: 3
 ---
 
 # Java
