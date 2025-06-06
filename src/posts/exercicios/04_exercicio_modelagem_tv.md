@@ -13,7 +13,7 @@ order: 4
 
 [^Takenami]
 
-1. Utilizando os conhecimentos de O.O.,  e os conceitos de encapsulamento,  construa um programa utilizando as informações abaixo. 
+1. Utilizando os conhecimentos de O.O.  construa um programa utilizando as informações abaixo. 
 
     Uma televisão possui as seguintes características:
     - tamanho de tela (em polegadas);
