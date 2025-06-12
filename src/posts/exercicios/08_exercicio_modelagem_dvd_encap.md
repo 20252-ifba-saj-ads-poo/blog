@@ -1,15 +1,14 @@
 ---
 icon: dumbbell
-date: 2025-06-05 19:40:00.00 -3
+date: 2025-06-16 18:35:00.00 -3
 tag:
   - java
 category:
   - exercicio
-  - entrega
-order: 5
+order: 8
 ---
 
-# Exercício: Modelagem DVD
+# Exercício: Modelagem DVD com encapsulamento
 
 adaptado de [^Takenami]
 
@@ -32,9 +31,43 @@ adaptado de [^Takenami]
 1. Escreva o diagrama UML da classe Aparelho de DVD e implemente o código em Java para construir 1 Aparelho de DVD e 3 filmes diferentes, utilizando o construtor e os métodos definidos e inserir um filme no Aparelho de DVD.
 
 
-## Link para entrega
+::: details 
 
-[Entrega](https://classroom.github.com/a/VMs3PANX)
+  <figure>
+
+  ```plantuml {kroki}
+  @startuml
+  class AparelhoDVD{
+      boolean ligado
+      int volume
+      Filme filme
+      boolean emPlay
+      AparelhoDVD()
+      void ligar()
+      void desligar()
+      void inserirFilme(Filme filme)
+      Filme removerFilme()
+  }
+  class Filme{
+    String nome;
+    String categoria;
+    double duracao;
+    Filme(String nome, String categoria, double duracao)
+  }
+  AparelhoDVD --> Filme
+  @enduml
+
+  ```
+  </figure>
+
+
+  @[code](../code/modelagemDVD/DVD.java)
+
+  @[code](../code/modelagemDVD/Filme.java)
+
+  @[code](../code/modelagemDVD/Mesa.java)
+
+:::
 
 
 <!-- @include: ../../../includes/bib.md -->

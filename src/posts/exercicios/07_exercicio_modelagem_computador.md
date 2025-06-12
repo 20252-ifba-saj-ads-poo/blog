@@ -5,6 +5,7 @@ tag:
   - java
 category:
   - exercicio
+  - entrega
 order: 7
 ---
 
@@ -28,3 +29,7 @@ order: 7
   
 Desenhe o diagrama UML das classes envolvidas e implemente o código em Java para criar pelo menos dois computadores, cada um associado com configurações diferentes de memória, processador e placa de vídeo, utilizando os construtores e métodos definidos.
 
+
+## Link da entrega
+
+[Entrega](https://classroom.github.com/a/g6lS_h03)
