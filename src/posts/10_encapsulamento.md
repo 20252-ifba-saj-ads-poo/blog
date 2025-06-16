@@ -7,7 +7,7 @@ tag:
   - construtor
 category:
   - aula
-order: 7
+order: 10
 ---
 
 # Encapsulamento
@@ -411,5 +411,5 @@ class Programa{
 
 ## Exercícios
 
-- [Exercício Modelagem TV](exercicios/08_exercicio_modelagem_dvd_encap.md)
+- [Exercício Modelagem DVD Enca](exercicios/08_exercicio_modelagem_dvd_encap.md)
 
