@@ -92,3 +92,40 @@ order: 9
 1. **Biblioteca de Música Digital:**
     Crie um sistema para gerenciar uma biblioteca de música digital. Os usuários podem criar listas de reprodução, cada uma contendo várias músicas. Cada música tem informações, como título, artista e duração. Os usuários podem adicionar e remover músicas de suas listas de reprodução e reproduzir as músicas em suas listas. Implemente funcionalidades para listar as músicas em uma lista de reprodução, calcular a duração total da lista de reprodução e reproduzir músicas.
 
+1. **Sistema de Locadora de Veículos:**
+   Modele um sistema para uma locadora de veículos. A locadora possui diferentes tipos de veículos (carros, motos, vans), cada um com informações como modelo, placa, ano e status (disponível, alugado, manutenção). Os clientes podem alugar veículos para períodos específicos. O sistema deve permitir consultar veículos disponíveis, registrar novas locações e calcular o valor total do aluguel.
+
+1. **Gestão de Restaurante e Pedidos:**
+   Desenvolva um sistema para gerenciar um restaurante. O restaurante possui um cardápio com pratos e bebidas, cada item com preço e descrição. Os clientes podem fazer pedidos, que podem conter vários itens do cardápio. Implemente funcionalidades para registrar pedidos, calcular o valor total e listar os itens de cada pedido.
+
+1. **Sistema de Biblioteca Escolar:**
+   Crie um sistema para gerenciar uma biblioteca escolar. A biblioteca possui livros, revistas e jornais, cada um com título, autor e código de identificação. Os alunos podem emprestar e devolver itens. O sistema deve controlar o histórico de empréstimos de cada aluno e a disponibilidade dos itens.
+
+1. **Gestão de Academia de Ginástica:**
+   Modele um sistema para uma academia. A academia possui alunos, professores e diferentes modalidades de aulas (musculação, pilates, yoga). Cada aluno pode se inscrever em várias modalidades e cada professor pode ministrar várias aulas. Implemente funcionalidades para listar alunos por modalidade e professores responsáveis por cada aula.
+
+1. **Sistema de Cinema e Ingressos:**
+   Desenvolva um sistema para um cinema. O cinema exibe vários filmes, cada um com sessões em horários diferentes. Os clientes podem comprar ingressos para sessões específicas. O sistema deve controlar a quantidade de ingressos disponíveis por sessão e permitir consultar sessões por filme.
+
+1. **Gestão de Condomínio Residencial:**
+   Crie um sistema para gerenciar um condomínio. O condomínio possui apartamentos, moradores e funcionários. Cada apartamento pode ter vários moradores. Os funcionários podem ser porteiros, zeladores ou seguranças. Implemente funcionalidades para listar moradores por apartamento e funcionários por função.
+
+1. **Sistema de Controle de Transportes Urbanos:**
+   Modele um sistema para controlar linhas de ônibus de uma cidade. Cada linha possui vários ônibus, motoristas e itinerários. Os motoristas podem dirigir diferentes ônibus em diferentes linhas. Implemente funcionalidades para consultar ônibus por linha, motoristas por linha e itinerários de cada linha.
+
+1. **Gestão de Feira de Ciências Escolar:**
+   Desenvolva um sistema para organizar uma feira de ciências. A feira possui projetos, alunos participantes e professores orientadores. Cada projeto pode ter vários alunos e um ou mais professores. Implemente funcionalidades para listar projetos por aluno, professores por projeto e alunos por projeto.
+
+1. **Sistema de Reserva de Salas em Universidade:**
+   Crie um sistema para reservar salas em uma universidade. Existem diferentes salas (auditórios, laboratórios, salas de aula), cada uma com capacidade e recursos disponíveis. Professores e alunos podem reservar salas para eventos ou aulas. O sistema deve controlar a disponibilidade das salas e listar reservas por sala e por usuário.
+
+1. **Gestão de Clube de Leitura:**
+   Modele um sistema para um clube de leitura. O clube possui membros, encontros e livros discutidos. Cada encontro tem uma data, um livro e uma lista de membros presentes. Implemente funcionalidades para registrar encontros, listar membros presentes em cada encontro e livros discutidos pelo clube.
+
+1. **Sistema de Controle de Inventário de Equipamentos:**
+   Desenvolva um sistema para controlar o inventário de equipamentos de uma empresa. Cada equipamento tem informações como nome, número de série, localização e status (em uso, disponível, manutenção). Funcionários podem solicitar equipamentos. O sistema deve registrar solicitações, controlar a disponibilidade e listar equipamentos por localização.
+
+1. **Sistema de gestão financeira pessoal (fluxo de caixa simplificado)**
+   Desenvolva um sistema para gerenciar finanças pessoais. O sistema deve permitir o registro de despesas fixas mensais (como aluguel, prestadoras de serviços, etc.), gastos eventuais (como compras de supermercado, lazer, etc.) e receitas (como salário, investimentos, etc.). O usuário deve poder consultar o saldo atual, e prever o saldo futuro com base nas receitas e despesas registradas. O sistema deve permitir a categorização das despesas e receitas, possibilitando relatórios mensais e anuais.
+
+   
