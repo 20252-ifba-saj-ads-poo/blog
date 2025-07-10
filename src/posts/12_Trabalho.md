@@ -1,6 +1,6 @@
 ---
 icon: edit
-date: 2024-06-16 19:40:00.00 -3
+date: 2025-07-10 18:40:00.00 -3
 category:
   - aula
   - trabalho
