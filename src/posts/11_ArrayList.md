@@ -64,6 +64,44 @@ for (String aula : aulas) {
 }
 ```
 
+## contains
+
+O método `contains` é utilizado para verificar se um determinado elemento está presente na lista. Ele retorna `true` se o elemento estiver na lista e `false` caso contrário. O método utiliza o `equals` para comparar os elementos, então é importante que a classe dos objetos dentro da lista implemente corretamente o método `equals`. Veja o exemplo:
+
+```java
+import java.util.ArrayList;
+import java.util.List;  
+import java.util.Objects;
+
+class Aluno {
+    private String nome;
+
+    public Aluno(String nome) {
+        this.nome = nome;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (!(obj instanceof Aluno)) return false;
+        Aluno aluno = (Aluno) obj;
+        return Objects.equals(nome, aluno.nome);
+    }
+}
+
+public class TestandoListas {
+    public static void main(String[] args) {
+        List<Aluno> alunos = new ArrayList<>();
+        Aluno aluno1 = new Aluno("João");
+        Aluno aluno2 = new Aluno("Maria");
+        alunos.add(aluno1);
+        alunos.add(aluno2);
+        Aluno aluno3 = new Aluno("João");
+        System.out.println(alunos.contains(aluno3)); // true, pois aluno3 é igual a aluno1
+    }
+}
+```
+
 ## Acessando elementos
 
 E se eu quisesse saber apenas a primeira aula? O método aqui é o get. Ele retorna o primeiro elemento se passarmos o 0 como argumento:
