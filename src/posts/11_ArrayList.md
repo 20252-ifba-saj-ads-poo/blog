@@ -101,6 +101,7 @@ public class TestandoListas {
     }
 }
 ```
+<codapi-snippet sandbox="java" editor="basic"></codapi-snippet>
 
 ## Acessando elementos
 

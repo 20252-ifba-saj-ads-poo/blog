@@ -66,7 +66,7 @@ order: 9
 1. **Hierarquia Militar Simplificada:**
    Modele uma simplificação da hierarquia do Exército Brasileiro. Existem diferentes patentes militares, como Soldado, Cabo, Sargento, Tenente e Capitão. Cada patente tem atributos como nome, número de identificação e tempo de serviço. Os soldados reportam aos cabos, os cabos aos sargentos, os sargentos aos tenentes e os tenentes aos capitães. A identificação deve ser única para cada patente e deve ser gerada automaticamente. Implemente método para listar os subordinados de um militar e método mostrar o seu superior imediato. Deve ser feita a  remoção de subordinado na troca do imediato.
    
-   [Entrega](https://classroom.github.com/a/akv_sYWI)
+   [Entrega](https://classroom.github.com/a/8icZff1l)
 
 1. **Sistema de Reservas de Hotéis:**
    Desenvolva um sistema de reservas de hotéis. Cada hotel possui vários quartos, e cada quarto tem diferentes categorias, como luxo, padrão, suíte, etc. Os clientes podem fazer reservas para datas específicas e escolher um tipo de quarto. O sistema deve rastrear a disponibilidade de quartos e calcular o preço total da reserva com base na categoria do quarto e no número de noites.
