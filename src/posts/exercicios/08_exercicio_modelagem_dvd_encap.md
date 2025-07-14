@@ -5,7 +5,7 @@ tag:
   - java
 category:
   - exercicio
-order: 8
+order: 9
 ---
 
 # Exercício: Modelagem DVD com encapsulamento

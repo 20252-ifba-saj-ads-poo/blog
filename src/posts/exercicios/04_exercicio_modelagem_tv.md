@@ -6,7 +6,7 @@ tag:
 category:
   - exercicio
   - entrega
-order: 4
+order: 5
 ---
 
 # Exercício: Modelagem TV

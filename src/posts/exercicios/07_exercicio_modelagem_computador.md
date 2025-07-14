@@ -6,7 +6,7 @@ tag:
 category:
   - exercicio
   - entrega
-order: 7
+order: 8
 ---
 
 # Exercício: Modelagem Computador

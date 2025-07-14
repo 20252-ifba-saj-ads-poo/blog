@@ -6,7 +6,7 @@ tag:
 category:
   - exercicio
   - entrega
-order: 5
+order: 6
 ---
 
 # Exercício: Modelagem DVD
