@@ -44,6 +44,46 @@ Gerenciar a lista de produtos cadastrados, recuperar os dados de um produto ou r
 5. Qualquer erro ou exceção gerada na **Camada de Negócio** é capturada pela **Camada de Apresentação** e exibida de maneira amigável para o usuário.
 
 
+### Diagrama de Sequência
+
+Exemplo de Diagrama de Sequência para o caso de uso "Cadastrar Projeto":
+
+
+```plantuml{kroki=true}
+@startuml
+hide footbox
+actor Usuario #red
+box "Apresentação" #lightblue  
+    participant TelaCadastroProjeto
+end box
+!pragma teoz true
+box "Negócio" #green
+participant ValidarProjeto
+box "Modelo" #lightgreen
+participant Projeto
+end box
+end box
+box "Persistência" #lightyellow
+    participant ProjetoDAO
+end box
+
+Usuario -> TelaCadastroProjeto: Enviar as \n informações do Projeto \n (nome, tema, descrição)
+create Projeto
+TelaCadastroProjeto -> Projeto: new
+
+
+TelaCadastroProjeto -> ValidarProjeto: Salvar Projeto
+ValidarProjeto -> ValidarProjeto: Validar as informações \n do Projeto
+ValidarProjeto -> ProjetoDAO: Salvar Projeto no \n "Banco de Dados"
+ProjetoDAO -> ProjetoDAO: Persistir Projeto \n no "Banco de Dados"
+ProjetoDAO --> ValidarProjeto : Retornar Projeto salvo
+ValidarProjeto --> TelaCadastroProjeto: Retornar Projeto salvo
+TelaCadastroProjeto --> Usuario: Exibir mensagem de sucesso 
+
+@enduml
+
+```
+
 ## Barema para Avaliação do Trabalho
 
 O barema a seguir será utilizado para avaliar a implementação do projeto. Cada critério possui um peso específico, totalizando 100 pontos.
