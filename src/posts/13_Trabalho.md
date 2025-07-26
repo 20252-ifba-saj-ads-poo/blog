@@ -53,23 +53,23 @@ Exemplo de Diagrama de Sequência para o caso de uso "Cadastrar Projeto":
 @startuml
 hide footbox
 actor Usuario #red
-box "Apresentação" #lightblue  
+box "Apresentação\n<Boundary>" #lightblue  
     participant TelaCadastroProjeto
 end box
 !pragma teoz true
-box "Negócio" #green
-participant ValidarProjeto
-box "Modelo" #lightgreen
-participant Projeto
+box "Negócio\n<Control>" #lightgreen
+   participant ValidarProjeto
 end box
-end box
-box "Persistência" #lightyellow
+box "Persistência\n<Entity>" #yellow
+   box "Modelo" #lightyellow
+      participant Projeto
+   end box
     participant ProjetoRepository
 end box
 
 Usuario -> TelaCadastroProjeto: Enviar as \n informações do Projeto \n (nome, tema, descrição)
 create Projeto
-TelaCadastroProjeto -> Projeto: new
+TelaCadastroProjeto -> Projeto: new (Deveria ser um DTO, por questões de \nsimplificação estamos utilizando o modelo)
 
 
 TelaCadastroProjeto -> ValidarProjeto: Salvar Projeto
