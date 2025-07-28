@@ -811,6 +811,63 @@ class Aluno extends Pessoa {
 
 Isso acontece porque o Java sempre tenta chamar `super()` implicitamente **se nenhum construtor da superclasse for especificado**. Como `Pessoa` não tem um construtor padrão, o compilador não consegue encontrar um construtor adequado para ser chamado automaticamente.
 
+## Proibindo Herança
+
+Para proibir que uma classe seja estendida, podemos usar o modificador de acesso `final`. Quando uma classe é declarada como `final`, ela não pode ser estendida por outras classes.
+
+### Exemplo de Classe Final
+
+```java
+// Classe final
+final class ClasseFinal {
+    public void metodo() {
+        System.out.println("Método da classe final");
+    }
+}   
+
+// Tentativa de estender a classe final
+class SubClasse extends ClasseFinal { // Isso causará um erro de compilação
+    public void metodo() {
+        System.out.println("Método da subclasse");
+    }       
+}
+```
+
+## Limitando Herança
+
+Para definir quais classes podem estender outra, usa-se a palavra-chave `sealed` em conjunto com a palavra-chave `permits` na definição da classe que será estendida. A classe selada (sealed class) lista explicitamente as classes que têm permissão para estendê-la, restringindo a herança apenas a essas classes especificadas. 
+
+### Exemplo de Classe Selada
+
+```java
+// Classe selada
+sealed class ClasseSelada permits SubClasse1, SubClasse2 {
+    public void metodo() {
+        System.out.println("Método da classe selada");
+    }
+}   
+// Subclasse permitida
+final class SubClasse1 extends ClasseSelada {
+    public void metodo() {
+        System.out.println("Método da SubClasse1");
+    }
+}
+// Outra subclasse permitida
+final class SubClasse2 extends ClasseSelada {
+    public void metodo() {
+        System.out.println("Método da SubClasse2");
+    }
+}   
+// Tentativa de estender a classe selada por uma classe não permitida
+class SubClasseNaoPermitida extends ClasseSelada { // Isso causará um erro de compilação
+    public void metodo() {
+        System.out.println("Método da SubClasseNaoPermitida");
+    }
+}
+```
+
+
+
 ## Referências
 
 <!-- @include: ../../includes/bib.md -->
