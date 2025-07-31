@@ -28,7 +28,7 @@ public class Mamifero{
     private int altura;
     private double peso;
     public void mamar(){
-        System.out.println("Mamifero mamando");
+        IO.println("Mamifero mamando");
     }
 }
 ```
@@ -37,7 +37,7 @@ public class Mamifero{
 public class Morcego extends Mamifero{
     private double tamanhoPresa;
     public void voar(){
-        System.out.println("Morcego voando");
+        IO.println("Morcego voando");
     }
 }
 ```
@@ -150,10 +150,10 @@ class Gerente {
     int numeroDeFuncionariosGerenciados;
     public boolean autentica(int senha) {
         if (this.senha == senha) {
-            System.out.println("Acesso Permitido!");
+            IO.println("Acesso Permitido!");
             return true;
         } else {
-            System.out.println("Acesso Negado!");
+            IO.println("Acesso Negado!");
             return false;
         }
     }
@@ -179,10 +179,10 @@ class Gerente extends Funcionario {
     int numeroDeFuncionariosGerenciados;
     public boolean autentica(int senha) {
         if (this.senha == senha) {
-            System.out.println("Acesso Permitido!");
+            IO.println("Acesso Permitido!");
             return true;
         } else {
-            System.out.println("Acesso Negado!");
+            IO.println("Acesso Negado!");
             return false;
         }
     }
@@ -397,6 +397,21 @@ As classes específicas seriam "ligadas" de alguma forma à classe `Servico` par
 
 ```plantuml
 @startuml
+class Servico{
+    - Cliente contratante
+    - Funcionario responsavel 
+    - LocalDate dataDeContratacao 
+}
+class SeguroDeVeiculo{
+    - Veiculo veiculo 
+    - double valorDoSeguroDeVeiculo 
+    - double franquia 
+    
+}
+class Emprestimo{
+    - double valor 
+    - double taxa 
+}
 Servico <|-- SeguroDeVeiculo
 Servico <|-- Emprestimo
 @enduml
@@ -492,7 +507,7 @@ Se deixarmos a classe `Gerente` como ela está, ela vai herdar o método `getBon
 ```java
 Gerente gerente = new Gerente();
 gerente.setSalario(5000.0);
-System.out.println(gerente.getBonificacao());
+IO.println(gerente.getBonificacao());
 ```
 
 O resultado aqui será `500`. Não queremos essa resposta, pois o gerente deveria ter `750` de bônus nesse caso. Para consertar isso, uma das opções seria criar um novo método na classe Gerente, chamado, por exemplo, `getBonificacaoDoGerente`. O problema é que teríamos dois métodos em Gerente, confundindo bastante quem for usar essa classe, além de que cada um da uma resposta diferente.
@@ -514,7 +529,7 @@ Agora o método está correto para o `Gerente`. Refaça o teste e veja que o val
 ```java
 Gerente gerente = new Gerente();
 gerente.setSalario(5000.0);
-System.out.println(gerente.getBonificacao());
+IO.println(gerente.getBonificacao());
 ```
 
 :::tip  A anotação @Override
@@ -677,7 +692,7 @@ Quando temos uma hierarquia de classes, as chamadas dos construtores são mais c
 class Servico {
     // ATRIBUTOS
     public Servico(){
-        System.out.println("Servico");
+        IO.println("Servico");
     }
 }
 ```
@@ -686,7 +701,7 @@ class Servico {
 class Emprestimo extends Servico {
     // ATRIBUTOS
     public Emprestimo(){
-        System.out.println("Emprestimo");
+        IO.println("Emprestimo");
     }
 }
 ```
@@ -722,11 +737,11 @@ activate Emprestimo
 
 Emprestimo -> Servico 
 ref over Servico
-  System.out.println("Servico");
+  IO.println("Servico");
 end ref
 Emprestimo -> Emprestimo 
 ref over Emprestimo
-  System.out.println("Emprestimo");
+  IO.println("Emprestimo");
 end ref
 @enduml
 ```
@@ -749,7 +764,7 @@ class Pessoa {
     // Construtor com parâmetro
     public Pessoa(String nome) {
         this.nome = nome;
-        System.out.println("Construtor da classe Pessoa chamado!");
+        IO.println("Construtor da classe Pessoa chamado!");
     }
 }
 
@@ -761,7 +776,7 @@ class Aluno extends Pessoa {
     public Aluno(String nome, int matricula) {
         super(nome); // Chama o construtor da classe Pai (Pessoa)
         this.matricula = matricula;
-        System.out.println("Construtor da classe Aluno chamado!");
+        IO.println("Construtor da classe Aluno chamado!");
     }
 }
 
@@ -821,14 +836,14 @@ Para proibir que uma classe seja estendida, podemos usar o modificador de acesso
 // Classe final
 final class ClasseFinal {
     public void metodo() {
-        System.out.println("Método da classe final");
+        IO.println("Método da classe final");
     }
 }   
 
 // Tentativa de estender a classe final
 class SubClasse extends ClasseFinal { // Isso causará um erro de compilação
     public void metodo() {
-        System.out.println("Método da subclasse");
+        IO.println("Método da subclasse");
     }       
 }
 ```
@@ -843,25 +858,25 @@ Para definir quais classes podem estender outra, usa-se a palavra-chave `sealed`
 // Classe selada
 sealed class ClasseSelada permits SubClasse1, SubClasse2 {
     public void metodo() {
-        System.out.println("Método da classe selada");
+        IO.println("Método da classe selada");
     }
 }   
 // Subclasse permitida
 final class SubClasse1 extends ClasseSelada {
     public void metodo() {
-        System.out.println("Método da SubClasse1");
+        IO.println("Método da SubClasse1");
     }
 }
 // Outra subclasse permitida
 final class SubClasse2 extends ClasseSelada {
     public void metodo() {
-        System.out.println("Método da SubClasse2");
+        IO.println("Método da SubClasse2");
     }
 }   
 // Tentativa de estender a classe selada por uma classe não permitida
 class SubClasseNaoPermitida extends ClasseSelada { // Isso causará um erro de compilação
     public void metodo() {
-        System.out.println("Método da SubClasseNaoPermitida");
+        IO.println("Método da SubClasseNaoPermitida");
     }
 }
 ```
