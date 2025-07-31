@@ -1,5 +1,6 @@
 import { defineUserConfig } from "vuepress";
 import umlPlugin from 'markdown-it-plantuml';
+import table_captions from 'markdown-it-table-captions'
 import theme from "./theme.js";
 
 export default defineUserConfig({
@@ -26,8 +27,13 @@ export default defineUserConfig({
   title: "20251 POO",
   description: "Material das Aulas",
 
-  extendsMarkdown: (md) => {
-    md.use(umlPlugin, { openMarker: '```plantuml', closeMarker: '```' })
+  extendsMarkdown: (md) => {    
+    md.use(umlPlugin, {
+      openMarker: '```plantuml', 
+      closeMarker: '```',
+      server: 'https://kroki.io/plantuml/'
+    })
+    md.use(table_captions)
   },
 
 
