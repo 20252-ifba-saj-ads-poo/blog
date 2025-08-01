@@ -9,6 +9,7 @@
         "@vuepress/plugin-pwa": "2.0.0-rc.56",
         "@vuepress/plugin-search": "2.0.0-rc.55",
         "markdown-it-plantuml": "^1.4.1",
+        "markdown-it-table-captions": "^1.0.4",
         "mathjax-full": "^3.2.2",
         "sass-embedded": "^1.80.6",
         "vue": "^3.5.12",
@@ -993,6 +994,8 @@
     "markdown-it-emoji": ["markdown-it-emoji@3.0.0", "", {}, "sha512-+rUD93bXHubA4arpEZO3q80so0qgoFJEKRkRbjKX8RTdca89v2kfyF+xR3i2sQTwql9tpPZPOQN5B+PunspXRg=="],
 
     "markdown-it-plantuml": ["markdown-it-plantuml@1.4.1", "", {}, "sha512-13KgnZaGYTHBp4iUmGofzZSBz+Zj6cyqfR0SXUIc9wgWTto5Xhn7NjaXYxY0z7uBeTUMlc9LMQq5uP4OM5xCHg=="],
+
+    "markdown-it-table-captions": ["markdown-it-table-captions@1.0.4", "", {}, "sha512-EpUN5GJLdDbpWSSl0Qf51kwT1e4mUMDB60mitr8JH4Sciyzny7x80BcSG9vKk6MOmeYjmGJ4aBTQCnCf7Y1iZw=="],
 
     "math-intrinsics": ["math-intrinsics@1.1.0", "", {}, "sha512-/IXtbwEk5HTPyEwyKX6hGkYXxM9nbj64B+ilVJnC/R6B0pH5G4V3b0pVbL7DBj4tkhBAppbQUlf6F6Xl9LHu1g=="],
 

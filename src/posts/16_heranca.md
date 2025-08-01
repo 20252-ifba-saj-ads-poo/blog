@@ -11,10 +11,23 @@ order: 17
 
 [^Takenami]
 
+
+
+A **herança** é um dos pilares da programação orientada a objetos e representa a capacidade de uma classe reutilizar a estrutura e o comportamento definidos em outra classe, chamada de **superclasse** ou **classe pai**. A classe que herda essas características é chamada de **subclasse** ou **classe filha**.
+
+Com a herança, uma subclasse passa a incorporar tudo o que a superclasse possui — atributos e métodos — podendo ainda acrescentar suas próprias características específicas. Esse mecanismo permite a criação de **classes genéricas** que reúnem um conjunto de definições comuns a diversos objetos (processo conhecido como **generalização**). A partir dessas classes genéricas, é possível desenvolver outras mais específicas, que complementam e estendem os comportamentos existentes (o que chamamos de **especialização**).
+
+Em Java, a herança é **simples**, ou seja, uma classe só pode herdar de uma única superclasse — **herança múltipla não é permitida**. O principal objetivo desse recurso é **especializar** uma classe, enriquecendo-a com novas funcionalidades sem a necessidade de reescrever código já existente.
+
+Enquanto a **especialização** permite que uma classe se torne mais detalhada e específica, a **generalização** atua no sentido oposto, tornando o modelo mais abstrato e amplo, adequado a um número maior de situações.
+
+
+::: tip
 - É a capacidade de uma classe definir o seu comportamento e sua estrutura aproveitando definições de outra classe, normalmente conhecida como classe base ou classe pai
     - As subclasses herdam tudo o que a classe pai possui e acrescenta as suas características particulares
     - Através do mecanismo de herança é possível definirmos classes genéricas que agreguem um conjunto de definições comuns a um grande número de objetos(Generalização) 
     - A partir destas especializações genéricas podemos construir novas classes, mais específicas, que acrescentem novas características e comportamentos aos já existentes (Especialização)
+:::
 
 - Capacidade que uma classe tem de herdar as características e comportamentos de outra classe
 - Classe pai é chamada de superclasse e a filha de subclasse
@@ -850,6 +863,8 @@ class SubClasse extends ClasseFinal { // Isso causará um erro de compilação
 
 ## Limitando Herança
 
+Classes seladas são um recurso presente em várias linguagens orientadas a objetos modernas (Java, Kotlin, C\#, entre outras)[^1][^2][^3][^4]. Elas permitem que o desenvolvedor controle explicitamente quais subclasses podem estender uma determinada classe ou interface, limitando a herança a um conjunto pré-definido de tipos.
+
 Para definir quais classes podem estender outra, usa-se a palavra-chave `sealed` em conjunto com a palavra-chave `permits` na definição da classe que será estendida. A classe selada (sealed class) lista explicitamente as classes que têm permissão para estendê-la, restringindo a herança apenas a essas classes especificadas. 
 
 ### Exemplo de Classe Selada
@@ -881,8 +896,74 @@ class SubClasseNaoPermitida extends ClasseSelada { // Isso causará um erro de c
 }
 ```
 
+### Pontos Positivos
+
+- **Encapsulamento reforçado:** Ao restringir a herança, as classes seladas ajudam a manter a integridade da implementação original, evitando que subclasses externas modifiquem ou quebrem invariantes importantes do sistema. Isso é especialmente útil para proteger componentes críticos em frameworks e bibliotecas[^2][^5][^6].
+- **Menor acoplamento com o mundo externo:** Uma vez que apenas tipos conhecidos podem estender a classe, o sistema limita dependências externas e torna o comportamento mais previsível e fácil de raciocinar. O controle sobre o polimorfismo se torna explícito, dificultando efeitos colaterais indesejados[^3][^7][^5].
+- **Facilita manutenção e refatoração:** Saber exatamente quais classes compõem uma hierarquia torna mudanças futuras menos arriscadas, pois o impacto é restrito ao conjunto selado de subclasses[^3][^4].
+- **Aprimora type safety e pattern matching:** Nas linguagens que suportam pattern matching, como Kotlin e Java, classes seladas permitem checagem exaustiva de tipos pelo compilador, sendo possível garantir que todo fluxo de decisão cobre todos os casos possíveis, sem a necessidade de um `else` genérico[^3][^4][^5].
+- **Expressa melhor a intenção de design:** O uso de classes seladas comunica claramente aos demais desenvolvedores e ao compilador quais são as extensões permitidas, evitando ambiguidades[^1][^5][^6].
+- **Otimizações de desempenho:** Em compiladores, saber que uma classe não será herdada pode permitir otimizações internas[^8][^9].
+
+
+### Pontos Negativos
+
+- **Flexibilidade reduzida:** Selar uma classe impede a extensão fora do escopo permitido, o que pode ser um problema se, no futuro, surgirem novos requisitos de evolução modular ou reuso por herança[^3][^9][^6]. Decisões prematuras podem prejudicar a extensibilidade.
+- **Acoplamento interno cresce:** O núcleo da hierarquia (dentro do módulo/pacote) torna-se mais acoplado, pois todas as possíveis variações precisam ser previstas e implementadas antecipadamente pelo autor da classe base, limitando customizações externas[^10].
+- **Risco de overengineering:** O uso exagerado desse recurso pode tornar o design do sistema excessivamente rígido, dificultando adaptações, manutenção e entendimento do código em longo prazo[^3][^11].
+- **Dificuldade de depuração:** Em alguns casos, o uso extensivo pode dificultar teste e depuração, já que não é possível substituir facilmente a lógica com subclasses específicas para fins de mocking ou ajuste[^9].
+- **Impactos em padrões de projeto tradicionais:** Padrões como "Inversion of Control" e o uso de interfaces para desacoplamento podem não funcionar com classes fortemente seladas, exigindo abordagens alternativas[^10].
+
+
+### Boas Práticas
+
+- Use classes seladas em hierarquias fechadas, onde as possíveis variações são bem conhecidas e improváveis de mudar[^1][^3][^4][^6].
+- Evite selar classes prematuramente; pense no contexto e na possibilidade de extensão futura antes de aplicar esse nível de restrição[^6].
+- Documente sempre o motivo pelo qual a classe é selada, comunicando claramente a intenção do design[^6].
+- Para desacoplamento e extensão, priorize interfaces não-seladas e composição sobre herança rígida, mantendo o sistema maleável quando necessário[^10].
 
 
 ## Referências
 
 <!-- @include: ../../includes/bib.md -->
+
+[^1]: https://www.cinqict.nl/blog/sealed-classes-and-functional-programming-in-java
+
+[^2]: https://www.luisllamas.es/en/what-is-a-sealed-class-in-programming/
+
+[^3]: https://www.javacodegeeks.com/2024/08/a-deep-dive-into-sealed-classes-and-interfaces.html
+
+[^4]: https://kotlinlang.org/docs/sealed-classes.html
+
+[^5]: https://www.linkedin.com/pulse/java-tip-10-sealed-classes-controlled-inheritance-better-orsine-2luof
+
+[^6]: https://ironpdf.com/blog/net-help/csharp-sealed-class-guide/
+
+[^7]: https://dev.to/myexamcloud/sealed-class-rules-in-java-225h
+
+[^8]: https://rosettacode.org/wiki/Sealed_classes_and_methods
+
+[^9]: https://www.c-sharpcorner.com/article/what-is-sealed-class-in-c-sharp/
+
+[^10]: https://softwareengineering.stackexchange.com/questions/279028/low-coupling-when-using-sealed-classes
+
+[^11]: https://www.linkedin.com/pulse/sealed-enum-class-kotlin-amit-nadiger
+
+[^12]: https://dev.to/homolibere/learn-about-sealed-classes-in-c-5205
+
+[^13]: https://www.baeldung.com/java-sealed-classes-interfaces
+
+[^14]: https://bazlur.ca/2023/09/11/embracing-modernity-a-comprehensive-look-at-sealed-classes-pattern-matching-and-functional-paradigms-in-java/
+
+[^15]: https://stackoverflow.com/questions/6389417/should-i-recommend-sealing-classes-by-default
+
+[^16]: https://softwareengineering.stackexchange.com/questions/415501/the-point-of-sealing-a-class
+
+[^17]: https://stackoverflow.com/questions/74856128/kotlin-sealed-classes-vs-using-polymorphism
+
+[^18]: https://stackoverflow.com/questions/64188082/what-is-the-point-of-a-sealed-interface-in-java
+
+[^19]: https://www.reddit.com/r/Unity3D/comments/1jofpio/does_anyone_make_their_classes_sealed_is_it_worth/
+
+[^20]: https://www.infoq.com/articles/java-sealed-classes/
+

@@ -1,3 +1,11 @@
 {
-    "codium.codeCompletion.enable": true
+    "codium.codeCompletion.enable": true,
+    "java.format.settings.url": ".vscode/java-formatter.xml",
+    "java.configuration.runtimes": [
+        {
+            "name": "JavaSE-24",
+            "default": true
+        }
+    ]
+
 }
