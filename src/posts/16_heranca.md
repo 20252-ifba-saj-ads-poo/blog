@@ -869,25 +869,14 @@ Para definir quais classes podem estender outra, usa-se a palavra-chave `sealed`
 
 ### Exemplo de Classe Selada
 
+
+@[code](./code/heranca/ClasseSelada.java)
+
+@[code](./code/heranca/SubClasse1.java)
+
+@[code](./code/heranca/SubClasse2.java)
+
 ```java
-// Classe selada
-sealed class ClasseSelada permits SubClasse1, SubClasse2 {
-    public void metodo() {
-        IO.println("Método da classe selada");
-    }
-}   
-// Subclasse permitida
-final class SubClasse1 extends ClasseSelada {
-    public void metodo() {
-        IO.println("Método da SubClasse1");
-    }
-}
-// Outra subclasse permitida
-final class SubClasse2 extends ClasseSelada {
-    public void metodo() {
-        IO.println("Método da SubClasse2");
-    }
-}   
 // Tentativa de estender a classe selada por uma classe não permitida
 class SubClasseNaoPermitida extends ClasseSelada { // Isso causará um erro de compilação
     public void metodo() {
@@ -915,6 +904,7 @@ class SubClasseNaoPermitida extends ClasseSelada { // Isso causará um erro de c
 - **Impactos em padrões de projeto tradicionais:** Padrões como "Inversion of Control" e o uso de interfaces para desacoplamento podem não funcionar com classes fortemente seladas, exigindo abordagens alternativas[^10].
 
 
+
 ### Boas Práticas
 
 - Use classes seladas em hierarquias fechadas, onde as possíveis variações são bem conhecidas e improváveis de mudar[^1][^3][^4][^6].
@@ -922,6 +912,39 @@ class SubClasseNaoPermitida extends ClasseSelada { // Isso causará um erro de c
 - Documente sempre o motivo pelo qual a classe é selada, comunicando claramente a intenção do design[^6].
 - Para desacoplamento e extensão, priorize interfaces não-seladas e composição sobre herança rígida, mantendo o sistema maleável quando necessário[^10].
 
+#### Exemplo de Classe Selada em Java
+
+Considerando um sistema onde formas de pagamento são definidas, podemos criar uma classe selada `FormaPagamento` que limita as subclasses a `CartaoCredito`, `Boleto` e `Pix`.
+
+```java
+// Classe selada
+sealed class FormaPagamento permits CartaoCredito, Boleto, Pix {
+    public abstract void processarPagamento(double valor);
+}
+// Subclasse permitida
+final class CartaoCredito extends FormaPagamento {
+    @Override
+    public void processarPagamento(double valor) {
+        IO.println("Processando pagamento de " + valor + " via Cartão de Crédito");
+    }
+}
+// Outra subclasse permitida
+final class Boleto extends FormaPagamento {
+    @Override
+    public void processarPagamento(double valor) {
+        IO.println("Processando pagamento de " + valor + " via Boleto");
+    }
+}
+
+// Outra subclasse permitida
+final class Pix extends FormaPagamento {
+    @Override
+    public void processarPagamento(double valor) {
+        IO.println("Processando pagamento de " + valor + " via Pix");
+    }
+}
+```
+Nessa situação, novas formas de pagamento sempre iriam necessitar de intervenção do desenvolvedor no código, devido a natureza do negócio, ja que não seria possivel criar uma nova forma de pagamento apenas fazendo um novo cadatro no sistema.
 
 ## Referências
 
