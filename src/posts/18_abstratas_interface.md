@@ -602,6 +602,61 @@ Em algumas linguagens de programação não existe o conceito de `interface`.
 
 A `interface` é um tipo específico de classe abstrata onde existe apenas as definições de comportamentos.
 
+## Interface com métodos default
+
+Em Java, a partir da versão 8, as interfaces podem conter métodos com implementação padrão, chamados de métodos `default`. Esses métodos permitem que as interfaces forneçam implementações padrão para alguns de seus métodos, sem exigir que todas as classes que implementam a interface os sobrescrevam.
+
+```java 
+public interface ExemploInterface {
+    void metodoAbstrato();
+
+    default void metodoDefault() {
+        System.out.println("Implementação padrão do método default.");
+    }
+}
+```
+As classes que implementam essa interface podem optar por sobrescrever o método `default`, mas não são obrigadas a fazê-lo. Isso permite que as interfaces evoluam ao longo do tempo, adicionando novos métodos com implementações padrão, sem quebrar as classes existentes que já implementam a interface.
+
+```java
+public class ExemploClasse implements ExemploInterface {
+    @Override
+    public void metodoAbstrato() {
+        System.out.println("Implementação do método abstrato.");
+    }
+
+    // Não é necessário sobrescrever o método default
+}
+```
+### Implementando múltiplas interfaces com métodos default
+
+Se uma classe implementa várias interfaces que possuem métodos `default` com o mesmo nome, a classe deve sobrescrever esse método para resolver a ambiguidade
+
+```java
+public interface InterfaceA {
+    default void metodo() {
+        System.out.println("InterfaceA - método default");
+    }
+}
+public interface InterfaceB {
+    default void metodo() {
+        System.out.println("InterfaceB - método default");
+    }
+}
+public class ExemploClasse implements InterfaceA, InterfaceB {
+    @Override
+    public void metodo() {
+        // Resolvendo a ambiguidade
+        InterfaceA.super.metodo(); // Chama o método default da InterfaceA
+        InterfaceB.super.metodo(); // Chama o método default da InterfaceB
+    }
+}
+```
+
+Caso a classe não sobrescreva o método, ocorrerá um erro de compilação devido à ambiguidade entre os métodos `default` das interfaces.
+
+> _Duplicate default methods named metodo with the parameters () and () are inherited from the types InterfaceB and InterfaceAJava(67109917)_
+
+
 ## Referências
 
 <!-- @include: ../../includes/bib.md -->
