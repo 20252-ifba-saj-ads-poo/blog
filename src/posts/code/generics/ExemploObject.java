@@ -1,3 +1,4 @@
+import java.io.IO;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,15 +17,15 @@ public class ExemploObject {
         Integer numero = (Integer) lista.get(1); // Cast para Integer
         Double decimal = (Double) lista.get(2); // Cast para Double
 
-        System.out.println("Texto: " + texto);
-        System.out.println("Número: " + numero);
-        System.out.println("Decimal: " + decimal);
+        IO.println("Texto: " + texto);
+        IO.println("Número: " + numero);
+        IO.println("Decimal: " + decimal);
 
         // Problema: Erro em tempo de execução se o cast estiver errado
         try {
             Integer erro = (Integer) lista.get(0); // Cast incorreto (String para Integer)
         } catch (ClassCastException e) {
-            System.out.println("Erro de cast: " + e.getMessage());
+            IO.println("Erro de cast: " + e.getMessage());
         }
     }
 }

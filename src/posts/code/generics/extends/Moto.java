@@ -1,3 +1,5 @@
+import java.io.IO;
+
 public class Moto extends Veiculo<MotorCombustao> {
     public Moto(String modelo, MotorCombustao motor) {
         super(modelo, motor);
@@ -5,6 +7,6 @@ public class Moto extends Veiculo<MotorCombustao> {
 
     @Override
     public void ligar() {
-        System.out.println("Moto " + getModelo() + " com " + getMotor() + " está ligada.");
+        IO.println("Moto " + getModelo() + " com " + getMotor() + " está ligada.");
     }
 }

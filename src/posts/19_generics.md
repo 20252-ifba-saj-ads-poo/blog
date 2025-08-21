@@ -28,6 +28,60 @@ Ao declarar explicitamente os tipos das variáveis, o código se torna mais leg�
 
 No entanto, a tipificação forte pode exigir mais esforço do desenvolvedor, já que é necessário garantir que os tipos estejam sempre corretos. É aqui que os generics entram em cena, oferecendo flexibilidade sem sacrificar a segurança.
 
+### Explicitando Subtipo
+
+Considerando o modelo a seguir:
+
+```plantuml
+abstract Veiculo{
+  Motor motor
+  Veiculo (Motor motor)
+  Motor getMotor()
+}
+
+class Moto extends Veiculo
+class Carro extends Veiculo
+class Caminhao extends Veiculo
+
+abstract Motor
+
+class MotorCombustao extends Motor{
+  - int cilindradas
+  + int getCilindradas()
+}
+
+class MotorEletrico extends Motor{
+  - int potenciaKW
+  + int getPotenciaKW()
+}
+
+Veiculo . Motor
+
+```
+
+Pela definição da classe `Veiculo`, o atributo `motor` é do tipo `Motor`. Isso significa que qualquer instância de `Veiculo` (`Carro`, `Moto` ou `Caminhao`) pode ter um motor de qualquer tipo que herde de `Motor`, como `MotorCombustao` ou `MotorEletrico`.
+
+Caso a classe filha de Veiculo precise de um tipo específico de motor, como `MotorCombustao`, o código ficaria assim:
+
+```java
+public class Carro extends Veiculo {
+    public Carro(MotorCombustao motor){
+      super(motor);
+    }
+}
+```
+
+Com isso, o construtor de `Carro` aceita apenas um `MotorCombustao`, garantindo que o tipo de motor seja consistente com o tipo de veículo.
+
+Apesar da instancia de um `Carro` sempre ter como instancia de motor um `MotorCombustao`, o `getMotor` vai retornar um `Motor`, sendo necessário fazer um cast para `MotorCombustao` quando for necessário acessar métodos específicos desse tipo de motor.
+
+```java
+Carro carro = new Carro(new MotorCombustao());
+Motor motor = carro.getMotor(); // Retorna Motor, mas é um MotorCombustao
+MotorCombustao motorCombustao = (MotorCombustao) motor; // Cast
+System.out.println("Cilindradas: " + motorCombustao.getCilindradas());
+```
+
 ## Generics
 
 Os generics foram introduzidos no Java 5 para permitir que classes, interfaces e métodos operem com tipos parametrizados. Eles são uma forma de criar código reutilizável e seguro, evitando a necessidade de casts explícitos, e erros de tipo, em tempo de execução.
@@ -69,40 +123,66 @@ Com generics, podemos criar coleções ou classes que trabalham com tipos espec�
 
 @[code](./code/generics/GenericsTest2.java)
 
-Saída
-
-```shell
-Value of the itemT: Test String.
-Type of the itemT: java.lang.String
-Value of the itemU: 100
-Type of the itemU: java.lang.Integer
-```
-
+<codapi-snippet sandbox="java" editor="basic"></codapi-snippet>
 
 ## Herança com Generics
 
 A combinação de herança e generics em Java permite criar hierarquias de classes que são flexíveis e seguras em termos de tipos. 
 
-Considere o cenário de um sistema de gerenciamento de veículos, onde devem ser criados diferentes tipos de veículos (carros, motos, caminhões). Cada veículo tem um tipo específico de motor, e queremos garantir que o tipo de motor seja consistente com o tipo de veículo.
+Considere o cenário de um sistema de gerenciamento de veículos, onde devem ser criados diferentes tipos de veículos apresentado no item anterior.
+
+Podemos usar generics para definir na classe base `Veiculo` um tipo genérico `T` que representa o tipo de motor do veículo. As subclasses podem então especificar o tipo de motor que usam.
+
+```plantuml
+@startuml
+abstract Veiculo<T>{
+  - T motor
+  - String modelo
+  + Veiculo (T motor, String modelo)
+  + T getMotor()
+  + String getModelo()
+  + void {abstract} ligar()
+}
+
+Veiculo <|-- Moto : <MotorCombustao>
+Veiculo <|-- Carro : <MotorCombustao>
+Veiculo <|-- Caminhao : <MotorEletrico>
 
 
-@[code](./code/generics/Veiculo.java)
+abstract Motor
+
+class MotorCombustao extends Motor{
+  - int cilindradas
+  + int getCilindradas()
+}
+
+class MotorEletrico extends Motor{
+  - int potenciaKW
+  + int getPotenciaKW()
+}
+
+Veiculo . Motor
+@enduml
+```
+
+As subclasses de Veiculo que especificam o tipo de motor.
+
+- `Carro`: Usa um `MotorCombustao`.
+- `Moto`: Usa um `MotorCombustao`.
+- `CaminhaoEletrico`: Usa um `MotorEletrico`.
+
+
+
+@[code](./code/generics/extends/Veiculo.java)
 
 A classe `Veiculo` é uma classe que aceita um tipo `T` genérico para o motor. Ela define comportamentos comuns para todos os veículos.
 
 
-@[code](./code/generics/MotorCombustao.java)
+@[code](./code/generics/extends/MotorCombustao.java)
 
-@[code](./code/generics/MotorEletrico.java)
-
-classes de motor: `MotorCombustao` e `MotorEletrico`.
+@[code](./code/generics/extends/MotorEletrico.java)
 
 
-As subclasses de Veiculo que especificam o tipo de motor.
-
-- Carro: Usa um MotorCombustao.
-- Moto: Usa um MotorCombustao.
-- CaminhaoEletrico: Usa um MotorEletrico.
 
 @[code](./code/generics/Carro.java)
 @[code](./code/generics/Moto.java)
@@ -119,15 +199,9 @@ Moto Esportiva com Motor Combustão (600cc) está ligada.
 Caminhão Elétrico Carga Pesada com Motor Elétrico (300kW) está ligado.
 ```
 
-::: warning Exemplo de Erro de Tipo
+A grande vantagem dessa abordagem é que ao chamar o método `getMotor`, o tipo retornado é específico para cada veículo, eliminando a necessidade de casts e aumentando a segurança do tipo.
 
-Se tentarmos criar um `Carro` com um `MotorEletrico`, o compilador gerará um erro:
-
-@[code](./code/generics/Erro.java)
-
-Isso demonstra como os generics ajudam a evitar erros em tempo de compilação.
-
-:::
+@[code](./code/generics/extends/TestaVeiculos.java)
 
 
 ## Restringir o tipo genérico `T`
@@ -138,14 +212,12 @@ Imagine que no exemplo anterior, alguém defina um novo veículo como o exibido 
 
 @[code](./code/generics/Pop.java)
 
-Faz sentido ter um veículo com um Motor `Interger`?
+Faz sentido ter um veículo como `Carro` passar como tipo T um `Interger`?
 
 É possível fazer uma restrição para que todos os tipos definidos para o genérico sejam filhos de `Motor`, por exemplo.
 
-@[code](./code/generics/extends/Motor.java)
-@[code{1}](./code/generics/extends/MotorCombustao.java)
-@[code{1}](./code/generics/extends/MotorEletrico.java)
-@[code{1}](./code/generics/extends/Veiculo.java)
+@[code](./code/generics/extends/Veiculo.java)
+@[code](./code/generics/Pop.java)
 
 Com essa restrição, a classe `Pop` não poderia ser compilada já que `Integer` não herda de `Motor`
 

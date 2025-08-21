@@ -1,3 +1,5 @@
+import java.io.IO;
+
 public class Pop extends Veiculo<Integer> {
     public Pop(String modelo, Integer motor) {
         super(modelo, motor);
@@ -5,7 +7,7 @@ public class Pop extends Veiculo<Integer> {
 
     @Override
     public void ligar() {
-        System.out.println("Pop " + getModelo() + " com " + getMotor() + " está ligado.");
+        IO.println("Pop " + getModelo() + " com " + getMotor() + " está ligado.");
     }
 }
 
