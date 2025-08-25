@@ -9,7 +9,7 @@ order: 21
 ---
 # Exceptions
 
-Considerando o que foi visto em [Pilha de execução](./03_Codificando_JAVA.md#pilha-de-execucao).
+Considerando o que foi visto em [Pilha de execução](./04_Codificando_JAVA.md#pilha-de-execucao).
 
 Quando um exceção (situação excepcional) ocorre, o JVM entra em estado de alerta e procura dento do metodo se existe algum tratamento especial para o problema.
 
@@ -139,6 +139,8 @@ public class AbrirArquivo {
     }
 }
 ```
+
+<codapi-snippet sandbox="java" editor="basic"></codapi-snippet>
 
 
 O código acima não compila e o compilador avisa que é necessário tratar o `FileNotFoundException` que pode ocorrer.Para compilar e fazer o programa funcionar, temos duas maneiras que podemos tratar o problema. A primeira é tratá-lo com o `try` e `catch` e a segunda forma de tratar esse erro, é delegar ele para quem chamou o nosso método, isto é, passar para a frente.
