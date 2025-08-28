@@ -10,7 +10,7 @@ category:
 
 # Exercícios sobre Exception (IllegalArgumentException, SaldoInsufucienteException)
 
-Considerando o exercicio [Modelagem Sistema Banco](./15_exercicio_Heranca4%20Banco.md)
+Considerando o exercicio [Modelagem Sistema Banco](./14_exercicio_Heranca4%20Banco.md)
 
 1. Na classe `Conta`, modifique o método deposita(double x). Ele deve lançar uma exception chamada `IllegalArgumentException`, que já faz parte da biblioteca do Java, sempre que o valor passado como argumento for inválido (por exemplo, quando for negativo).
     1. Adicione o try/catch para tratar o erro
