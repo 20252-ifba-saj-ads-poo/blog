@@ -1,6 +1,6 @@
 ---
 icon: code-pull-request
-date: 2025-08-11 20:00:00.00 -3
+date: 2025-09-01 20:00:00.00 -3
 category:
   - trabalho
   - exercicio
@@ -9,7 +9,7 @@ category:
 
 # Trabalho entrega final
 
-Entregar a camada de modelo com o código das classes e telas funcionais do sistema.
+Entrega final do trabalho no repositório abaixo.
 
 | Aluno                                 | Trabalho Sorteado                                                                                                                            |
 | ------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
