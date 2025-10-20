@@ -1,6 +1,6 @@
 ---
 icon: edit
-date: 2025-10-20 17:40:00.00 -3
+date: 2025-05-15 17:40:00.00 -3
 tag:
   - ementa
 category:
@@ -16,7 +16,7 @@ index: false
 
 **DOCENTE:** Leandro Costa Souza
 
-**PERÍODO LETIVO:** 2025.2
+**PERÍODO LETIVO:** 2024.2
 
 **Código Disciplina:** PRG04 Programação Orientada a Objetos
 
@@ -57,10 +57,8 @@ index: false
 - Polimorfismo e ligação dinâmica;
 - Sobrecarga de operadores, framework collections;
 - Exceções;
-- JavaFX;
-- Threads;
-- Streams;
-- Records;
+- JavaFX
+- Threads
 
 ## Metodologia
 
