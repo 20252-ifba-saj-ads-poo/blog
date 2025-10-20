@@ -10,8 +10,6 @@ star: true
 ---
 # Montando Ambiente de trabalho
 
-
-
 # SW utilizados
 
 - [JDK](https://adoptium.net/temurin/releases/)
@@ -96,7 +94,6 @@ add gh
 ```console
 scoop install main/gh
 ```
-
 
 ## Linux SDKman
 
