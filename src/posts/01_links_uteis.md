@@ -1,6 +1,6 @@
 ---
 icon: edit
-date: 2025-10-20 17:40:00.00 -3
+date: 2025-10-21 17:40:00.00 -3
 tag:
   - links
 category:
