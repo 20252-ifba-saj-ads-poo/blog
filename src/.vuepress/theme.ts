@@ -4,7 +4,7 @@ import navbar from "./navbar.js";
 import sidebar from "./sidebar.js";
 
 export default hopeTheme({
-  //hostname: "https://20251-ifba-saj-ads-poo.github.io",
+  //hostname: "https://20252-ifba-saj-ads-poo.github.io",
 
   author: {
     name: "Leandro Souza",
@@ -20,7 +20,7 @@ export default hopeTheme({
 
   logo: "/logo.svg",
 
-  repo: "20251-ifba-saj-ads-poo/blog",
+  repo: "20252-ifba-saj-ads-poo/blog",
 
   docsDir: "src",
 

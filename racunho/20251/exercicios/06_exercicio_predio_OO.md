@@ -22,4 +22,4 @@ order: 7
 [Entrega](https://classroom.github.com/a/EdS6deT_)
 
 
-[Repositório JavaFX](https://github.com/20251-ifba-saj-ads-poo/javafx-predio)
+[Repositório JavaFX](https://github.com/20252-ifba-saj-ads-poo/javafx-predio)

@@ -24,7 +24,7 @@ export default defineUserConfig({
   ],
 
   lang: "pt-BR",
-  title: "20251 POO",
+  title: "20252 POO",
   description: "Material das Aulas",
 
   extendsMarkdown: (md) => {    
