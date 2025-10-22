@@ -1,44 +1,50 @@
 
-A história do Java após a aquisição pela Oracle, a longa batalha judicial com o Google e os impactos na evolução da linguagem, especialmente nas especificações Java EE e Jakarta EE, é marcada por transformações legais, tecnológicas e comunitárias. Abaixo, uma síntese detalhada:
+A história do Java após a aquisição pela Oracle, a longa batalha judicial com o Google e os impactos na evolução da linguagem, especialmente nas especificações Java EE e Jakarta EE, é marcada por transformações legais, tecnológicas e comunitárias. 
 
-1. A aquisição da Sun Microsystems pela Oracle (2008)
-Em 2008, a Oracle adquiriu a Sun Microsystems por US$ 7,4 bilhões, tornando-se proprietária do Java e de suas tecnologias associadas. A Sun, criadora do Java em 1995, já havia estabelecido a linguagem como uma das mais populares do mundo, com foco em portabilidade e uso em dispositivos embarcados, internet e sistemas corporativos via Java EE (Enterprise Edition)17.
-A Oracle assumiu o controle do desenvolvimento da linguagem, incluindo as especificações do Java EE, que eram críticas para aplicações empresariais. Inicialmente, houve preocupações na comunidade sobre a gestão da Oracle, conhecida por seu modelo comercial fechado, em contraste com a cultura mais aberta da Sun912.
+### A aquisição da Sun Microsystems pela Oracle (2008)
+Em 2008, a Oracle adquiriu a Sun Microsystems por US$ 7,4 bilhões, tornando-se proprietária do Java e de suas tecnologias associadas. A Sun, criadora do Java em 1995, já havia estabelecido a linguagem como uma das mais populares do mundo, com foco em portabilidade e uso em dispositivos embarcados, internet e sistemas corporativos via Java EE (Enterprise Edition).
 
-2. A briga judicial entre Oracle e Google (2010–2021)
-O conflito começou em 2010, quando a Oracle processou o Google por usar APIs do Java SE no Android sem licença. O Google havia implementado 37 pacotes de APIs do Java (cerca de 11 mil linhas de código) para permitir que desenvolvedores migrassem aplicativos para o Android2511.
+A Oracle assumiu o controle do desenvolvimento da linguagem, incluindo as especificações do Java EE, que eram críticas para aplicações empresariais. Inicialmente, houve preocupações na comunidade sobre a gestão da Oracle, conhecida por seu modelo comercial fechado, em contraste com a cultura mais aberta da Sun.
+
+### A briga judicial entre Oracle e Google (2010–2021)
+
+O conflito começou em 2010, quando a Oracle processou o Google por usar APIs do Java SE no Android sem licença. O Google havia implementado 37 pacotes de APIs do Java (cerca de 11 mil linhas de código) para permitir que desenvolvedores migrassem aplicativos para o Android.
+
 Principais pontos do caso:
 
-Direitos autorais de APIs: A Oracle alegou que as APIs eram protegidas por copyright, enquanto o Google argumentou que seu uso se enquadrava no "fair use" (uso justo), essencial para a interoperabilidade511.
+**Direitos autorais de APIs**: A Oracle alegou que as APIs eram protegidas por copyright, enquanto o Google argumentou que seu uso se enquadrava no "fair use" (uso justo), essencial para a interoperabilidade.
 
-Decisões judiciais: Em 2012, um júri considerou o uso do Google legal, mas em 2014 um tribunal reverteu a decisão, afirmando que APIs poderiam ser protegidas. Em 2021, a Suprema Corte dos EUA decidiu, por 6 votos a 2, que o uso das APIs pelo Google era "transformativo" e justo, encerrando a disputa após 11 anos211.
+**Decisões judiciais**: Em 2012, um júri considerou o uso do Google legal, mas em 2014 um tribunal reverteu a decisão, afirmando que APIs poderiam ser protegidas. Em 2021, a Suprema Corte dos EUA decidiu, por 6 votos a 2, que o uso das APIs pelo Google era "transformativo" e justo, encerrando a disputa após 11 anos.
 
-Impacto no Android: Após a decisão, o Google migrou para o OpenJDK (versão open-source do Java), evitando futuros conflitos511.
+**Impacto no Android**: Após a decisão, o Google migrou para o OpenJDK (versão open-source do Java), evitando futuros conflitos.
 
-3. Impactos na evolução do Java EE e o surgimento do Jakarta EE
+### Impactos na evolução do Java EE e o surgimento do Jakarta EE
+
 A aquisição pela Oracle e o foco em litígios afetaram diretamente o desenvolvimento do Java EE (Enterprise Edition), usado para aplicações corporativas.
 Principais eventos:
 
-Estagnação do Java EE: Sob a Oracle, o Java EE 8 (lançado em 2017) teve progresso lento, com poucas inovações para demandas modernas como computação em nuvem e microsserviços. A comunidade criticou a falta de investimento da Oracle912.
+**Estagnação do Java EE**: Sob a Oracle, o Java EE 8 (lançado em 2017) teve progresso lento, com poucas inovações para demandas modernas como computação em nuvem e microsserviços. A comunidade criticou a falta de investimento da Oracle.
 
-Doação para a Eclipse Foundation: Em 2017, a Oracle doou o Java EE para a Eclipse Foundation, que o rebatizou como Jakarta EE devido a restrições de marca (a Oracle manteve o nome "Java")3912.
+**Doação para a Eclipse Foundation**: Em 2017, a Oracle doou o Java EE para a Eclipse Foundation, que o rebatizou como Jakarta EE devido a restrições de marca (a Oracle manteve o nome "Java").
 
-Renascimento como Jakarta EE: O Jakarta EE priorizou a modernização, com foco em:
+### Renascimento como Jakarta EE
 
-Cloud-native e microsserviços: Adaptação para containers (Docker/Kubernetes) e integração com ferramentas como Eclipse MicroProfile12.
+O Jakarta EE priorizou a modernização, com foco em:
 
-Licenciamento aberto: As especificações, kits de compatibilidade (TCKs) e implementações de referência tornaram-se open source, promovendo colaboração entre empresas como Red Hat, IBM e Microsoft69.
+**Cloud-native e microsserviços**: Adaptação para containers (Docker/Kubernetes) e integração com ferramentas como Eclipse MicroProfile12.
 
-Mudanças de nomenclatura: APIs migraram do pacote javax.* para jakarta.* para evitar conflitos legais39.
+**Licenciamento aberto**: As especificações, kits de compatibilidade (TCKs) e implementações de referência tornaram-se open source, promovendo colaboração entre empresas como Red Hat, IBM e Microsoft69.
 
-4. Consequências para o ecossistema Java
-Fragmentação e união: A briga Oracle-Google levantou debates sobre direitos autorais de código, mas a vitória do Google fortaleceu a interoperabilidade. Já a transição para o Jakarta EE unificou comunidades antes divididas (como Spring e Java EE)912.
+**Mudanças de nomenclatura**: APIs migraram do pacote javax.* para jakarta.* para evitar conflitos legais39.
 
-Inovação acelerada: O Jakarta EE adotou ciclos de lançamento mais rápidos, com versões como EE 9 (2020) e EE 10 (2022), introduzindo suporte a Java SE 17, CDI 4.0 e melhorias para cloud312.
+### Consequências para o ecossistema Java
 
-Adoção empresarial: Empresas como Red Hat e IBM passaram a liderar o desenvolvimento, garantindo que o Jakarta EE atendesse a demandas reais do mercado, como segurança escalável e integração com Kubernetes612.
+Fragmentação e união: A briga Oracle-Google levantou debates sobre direitos autorais de código, mas a vitória do Google fortaleceu a interoperabilidade. Já a transição para o Jakarta EE unificou comunidades antes divididas (como Spring e Java EE).
 
-Conclusão
+**Inovação acelerada**: O Jakarta EE adotou ciclos de lançamento mais rápidos, com versões como EE 9 (2020) e EE 10 (2022), introduzindo suporte a Java SE 17, CDI 4.0 e melhorias para cloud.
+
+**Adoção empresarial**: Empresas como Red Hat e IBM passaram a liderar o desenvolvimento, garantindo que o Jakarta EE atendesse a demandas reais do mercado, como segurança escalável e integração com Kubernetes.
+
 A aquisição pela Oracle e a disputa judicial com o Google redefiniram o futuro do Java. Enquanto o caso Google-Oracle estabeleceu precedentes legais para APIs e inovação, a migração do Java EE para o Jakarta EE sob a Eclipse Foundation revitalizou a plataforma, adaptando-a às necessidades modernas. Hoje, o Jakarta EE representa não apenas uma evolução técnica, mas um modelo de governança aberta e colaborativa, essencial para a sobrevivência da linguagem em um cenário de computação em nuvem e código aberto.
 
 A aquisição da Sun Microsystems pela Oracle em 2008 marcou uma mudança significativa na governança do Java, mesmo com a existência do Java Community Process (JCP), um mecanismo colaborativo para evolução da linguagem. A Oracle assumiu o controle estratégico e legal sobre o Java, influenciando diretamente sua evolução, apesar do JCP ser teoricamente um processo aberto. Abaixo, os detalhes desse controle:
