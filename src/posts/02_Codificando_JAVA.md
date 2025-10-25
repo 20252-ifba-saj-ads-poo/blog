@@ -884,8 +884,8 @@ public class JOptionPaneGConverter {
         preco = Converter.read("Informe o preço da mercadoria = R$ ", Float::valueOf);
         JOptionPane.showMessageDialog(null, "Valor selecionado :" + preco, "Mensagem", JOptionPane.PLAIN_MESSAGE);
 
-        // Lendo um valor real:
-        Double salario= Converter.read("Informe o salário do Funcionário = R$", Double::valueOf);
+        // Lendo um valor Double que pode ser nulo:
+        Double salario= Converter.read("Informe o salário do Funcionário = R$", Double::valueOf, true);
         JOptionPane.showMessageDialog(null, "Valor selecionado :" + salario, "Mensagem", JOptionPane.PLAIN_MESSAGE);
 
         // Lendo uma String, usado na leitura de palavras compostas, por exemplo, Pato
@@ -900,16 +900,28 @@ public class JOptionPaneGConverter {
 
 class Converter {
     public static <T> T read(String prompt, Function<String, T> converter) {
+        return read(prompt, converter, false);
+    }
+    public static <T> T read(String prompt, Function<String, T> converter, Boolean nullable) {
         try {
             String input = JOptionPane.showInputDialog(null, prompt, "Informe", JOptionPane.QUESTION_MESSAGE);
+            if (input.isEmpty()) {
+                if (nullable) {
+                    return null;
+                }else{
+                    return wrongFormat(prompt, converter, nullable);
+                }
+            }
             return converter.apply(input);
         } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, "Erro no formato do dado. Informar novamente", "Erro",
-                    JOptionPane.ERROR_MESSAGE);
-            // System.out.println("Erro no formato do dado. Informar novamente.\n");
             e.printStackTrace();
-            return read(prompt, converter);
+            return wrongFormat(prompt, converter, nullable);
         }
+    }
+    private static <T> T wrongFormat(String prompt, Function<String, T> converter, Boolean nullable){
+        JOptionPane.showMessageDialog(null, "Erro no formato do dado. Informar novamente", "Erro",
+                    JOptionPane.ERROR_MESSAGE);
+        return read(prompt, converter, nullable);
     }
 }
 
