@@ -859,6 +859,82 @@ public enum OpcoesMenu {
 }
 ```
 
+### Exemplo de JOptionPane com converter genérico
+
+```java
+import java.util.function.Function;
+
+import javax.swing.JOptionPane;
+import java.util.Arrays;
+
+public class JOptionPaneGConverter {
+    public static void main(String[] args) {
+        OpcoesMenu opcao = Converter.read(
+                "Escolha uma opção:\n1 - SALVAR\n2 - IMPRIMIR\n3 - ABRIR\n4 - VISUALIZAR\n5 - FECHAR",
+                 OpcoesMenu::getEnum);
+        JOptionPane.showMessageDialog(null, "Valor selecionado :" + opcao, "Mensagem", JOptionPane.PLAIN_MESSAGE);
+        // Lendo um valor inteiro:
+        Integer n;
+
+        n = Converter.read("Informe um número para a tabuada: ", Integer::valueOf);
+        JOptionPane.showMessageDialog(null, "Valor selecionado :" + n, "Mensagem", JOptionPane.PLAIN_MESSAGE);
+
+        // Lendo um valor real:
+        Float preco;
+        preco = Converter.read("Informe o preço da mercadoria = R$ ", Float::valueOf);
+        JOptionPane.showMessageDialog(null, "Valor selecionado :" + preco, "Mensagem", JOptionPane.PLAIN_MESSAGE);
+
+        // Lendo um valor real:
+        Double salario= Converter.read("Informe o salário do Funcionário = R$", Double::valueOf);
+        JOptionPane.showMessageDialog(null, "Valor selecionado :" + salario, "Mensagem", JOptionPane.PLAIN_MESSAGE);
+
+        // Lendo uma String, usado na leitura de palavras compostas, por exemplo, Pato
+        // Branco:
+        String s = JOptionPane.showInputDialog(null, "Informe uma cadeia de caracteres:", "Informe", JOptionPane.QUESTION_MESSAGE);
+        JOptionPane.showMessageDialog(null, "Valor selecionado :" + s, "Mensagem", JOptionPane.PLAIN_MESSAGE);
+
+        System.exit(0);
+    }
+
+}
+
+class Converter {
+    public static <T> T read(String prompt, Function<String, T> converter) {
+        try {
+            String input = JOptionPane.showInputDialog(null, prompt, "Informe", JOptionPane.QUESTION_MESSAGE);
+            return converter.apply(input);
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Erro no formato do dado. Informar novamente", "Erro",
+                    JOptionPane.ERROR_MESSAGE);
+            // System.out.println("Erro no formato do dado. Informar novamente.\n");
+            e.printStackTrace();
+            return read(prompt, converter);
+        }
+    }
+}
+
+enum OpcoesMenu {
+    SALVAR(1), IMPRMIR(2), ABRIR(3), VISUALIZAR(4), FECHAR(5);
+
+    private final int valor;
+
+    OpcoesMenu(int valorOpcao) {
+        valor = valorOpcao;
+    }
+
+    public int getValor() {
+        return valor;
+    }
+
+    public static OpcoesMenu getEnum(String valor) {
+        int intValor = Integer.valueOf(valor);
+        return Arrays.stream(values())
+                .filter(opcoesMenu -> opcoesMenu.valor == intValor)
+                .findFirst().get();
+    }
+}
+```
+
 https://www.devmedia.com.br/tipos-enum-no-java/25729
 
 ## Pilha de Execução
