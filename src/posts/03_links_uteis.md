@@ -5,7 +5,7 @@ tag:
   - links
 category:
   - aula
-order: 1
+order: 3
 star: true
 ---
 # Montando Ambiente de trabalho
