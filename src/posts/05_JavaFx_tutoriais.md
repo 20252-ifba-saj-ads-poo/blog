@@ -24,6 +24,8 @@ https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack
 
 - Pressione <kbd>F1</kbd> e selecione a opção `Java: Create Java Projetc...`
 - Selecione a opção `Maven`
+- Selecione a opção `More...`
+- Digita `fxml`
 - Selecione a opção `javafx-archetype-fxml org.openjfx`
 - Selecione a opção `0.0.6`
 - Digite o valor `br.edu.ifba.saj.ads.poo` 
