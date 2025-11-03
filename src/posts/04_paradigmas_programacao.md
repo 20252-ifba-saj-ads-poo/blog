@@ -1,11 +1,11 @@
 ---
 icon: edit
-date: 2025-11-30 17:40:00.00 -3
+date: 2025-11-03 17:40:00.00 -3
 tag:
   - java
   - paradigmas
 category:
-  - aula
+  - aula  
 order: 4
 ---
 

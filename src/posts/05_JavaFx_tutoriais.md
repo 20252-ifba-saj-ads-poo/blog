@@ -5,6 +5,8 @@ tag:
   - javafx
 category:
   - aula
+  - exercicio
+  - entrega
 order: 5
 ---
 
