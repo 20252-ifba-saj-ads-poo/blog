@@ -34,7 +34,7 @@ https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack
 - ao ser perguntado pelo valor de `version` pode deixar o valor padrão (1.0-SNAPSHOT)
 - ao ser perguntado por `Confirm properties configuration` pode deixar o valor padrão (Y)
 - Selecione `Open` para abrir o projeto em uma nova janela no VSCode
-- Na sessão `JAVA PROJECTS` clique com o lado direita do mouse em cima no projeto e escolha a opção `Run`
+- No terminal execute `mvn clean javafx:run`
 
 
 ## Gluon Scene Builder
