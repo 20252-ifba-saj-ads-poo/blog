@@ -6,7 +6,7 @@ tag:
   - paradigmas
 category:
   - aula
-order: 3
+order: 1
 ---
 
 # História do Java
