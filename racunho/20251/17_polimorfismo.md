@@ -105,7 +105,7 @@ for(Animal animal : animais ) {
 
 ::: 
 
-
+![Variável <i>animal</i> na memória](./excalidraw/excalidraw-claymate.gif)
 
 - Cada animal responde ao método mover de uma maneira diferente
     - O peixe pode nadar 2 metros

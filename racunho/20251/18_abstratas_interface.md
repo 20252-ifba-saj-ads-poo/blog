@@ -422,6 +422,26 @@ class ContaCorrente implements Conta {
 
 A primeira vantagem de utilizar uma interface é a padronização das assinaturas dos métodos oferecidos por um determinado conjunto de classes. A segunda vantagem é garantir que determinadas classes implementem certos métodos.
 
+### Se comporta como um
+
+A relação entre uma interface e uma classe que a implementa é semelhante a relação de herança entre classes. Porem, nessa herança, não tem o que ser herdado, apenas vem a obrigação de implementar os métodos declarados na interface.
+
+Nessa relação, podemos dizer que uma classe que implementa uma interface "se comporta como" a interface que ela implementa.
+
+Por exemplo, em um sistema bancário, podemos ter um produto que seja uma `PrevidenciaPrivada`. Esse produto pode ser tratado como uma conta bancária para fins de depósito e saque de dinheiro.
+
+```java
+class PrevidenciaPrivada implements Conta {
+    public void deposita ( double valor ) {
+    // implementacao
+    }
+    public void saca ( double valor ) {
+    // implementacao
+    }
+}
+``` 
+Dessa forma, podemos dizer que a classe `PrevidenciaPrivada` se comporta como uma `Conta` pois ela implementa a interface `Conta`.
+
 #### Polimorfismo
 
 Se uma classe implementa uma interface, podemos aplicar a ideia do polimorfismo assim como quando aplicamos herança. Dessa forma, outra vantagem da utilização de interfaces é o ganho do polimorfismo.
