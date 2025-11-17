@@ -69,23 +69,67 @@ Add git
 ```console
 scoop install main/git
 ```
-Add maven
-
-```console
-scoop install main/maven
-```
 
 Add java
+
+::: tabs
+
+@tab scoop
+
 ```console
 scoop bucket add java
 scoop install java/temurin-lts-jdk
 ```
 
+
+@tab brew 
+
+```console
+brew install --cask temurin@25
+```
+
+:::
+
+
+Add maven
+
+::: tabs
+
+@tab scoop
+
+```console
+scoop install main/maven
+```
+
+
+@tab brew 
+
+```console
+brew install maven
+```
+
+::: 
+
 Add Scene Builder
+
+::: tabs
+
+@tab scoop
+
 ```console
 scoop bucket add extras
 scoop install extras/scene-builder
 ```
+
+
+@tab brew 
+
+```console
+brew install --cask scenebuilder
+```
+
+::: 
+
 
 add github desktop
 ```console
