@@ -480,7 +480,7 @@ void transferir(Conta destino, double quantidade){
 
 #### Prática FX Transferência entre Contas
 
-[JavaFx Transferência entre Contas](https://classroom.github.com/a/eMemd3eb)
+[JavaFx Transferência entre Contas](https://github.com/20252-ifba-saj-ads-poo/javafx-demo-conta)
 
 ### Comparando
 
