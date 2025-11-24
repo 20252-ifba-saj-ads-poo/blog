@@ -32,7 +32,7 @@ Desenhe o diagrama UML da classe TV e implemente o código em Java para construi
 
 ## Link para entrega
 
-[Entrega](https://classroom.github.com/a/NjDzH21M)
+[Entrega](https://classroom.github.com/a/BJBQGglx)
 
 
 <!-- @include: ../../../includes/bib.md -->
