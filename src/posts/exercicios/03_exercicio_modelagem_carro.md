@@ -36,4 +36,13 @@ order: 4
 [Entrega](https://classroom.github.com/a/EZKejwxe)
 
 
+::: details
+
+  @[code](./code/carro/Carro.java)
+
+  @[code](./code/carro/Main.java)
+```
+
+:::
+
 <!-- @include: ../../../includes/bib.md -->

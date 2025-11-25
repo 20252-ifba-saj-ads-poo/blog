@@ -34,5 +34,15 @@ Desenhe o diagrama UML da classe TV e implemente o código em Java para construi
 
 [Entrega](https://classroom.github.com/a/NjDzH21M)
 
+::: details
+
+  @[code](./code/tv/TV.java)
+
+  @[code](./code/tv/Voltagem.java)
+
+  @[code](./code/tv/Main.java)
+  
+```
+
 
 <!-- @include: ../../../includes/bib.md -->
