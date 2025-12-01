@@ -19,7 +19,7 @@ order: 6
 
 ## Link da entrega
 
-[Entrega]()
+[Entrega](https://classroom.github.com/a/g6su0cHo)
 
 
 [Repositório JavaFX](https://github.com/20252-ifba-saj-ads-poo/javafx-predio)
