@@ -42,7 +42,7 @@ Desenhe o diagrama UML da classe TV e implemente o código em Java para construi
 
   @[code](./code/tv/Main.java)
   
-```
+:::
 
 
 <!-- @include: ../../../includes/bib.md -->
