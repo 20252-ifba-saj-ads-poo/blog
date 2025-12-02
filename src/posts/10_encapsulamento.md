@@ -28,6 +28,8 @@ order: 10
 
 <figure>
 
+<div class="multicolumn">
+
 ```plantuml
 @startuml
 @startsalt
@@ -41,6 +43,22 @@ order: 10
 @endsalt
 @enduml
 ```
+
+```plantuml
+@startuml
+@startsalt
+{
+    {T
+        + java
+        ++ sql
+        +++ Date
+    }
+}
+@endsalt
+@enduml
+```
+
+</div>
 
 <figcaption>Representação da estrutura de diretório.</figcaption>
 </figure>
@@ -58,7 +76,6 @@ import pacote.Class;   // Importa uma única classe
 import pacotenovo.*;   // Importa todas as classes do pacote
 ```
 <figure>
-<div class="multicolumn">
 
 ```plantuml
 @startuml
@@ -68,14 +85,6 @@ package java  {
 }
 @enduml
 ```
-```plantuml
-@startuml
-package java.util  {        
-}
-@enduml
-```
-
-</div>
 <figcaption>Visualizações diferentes de subpacotes</figcaption>
 </figure>
 

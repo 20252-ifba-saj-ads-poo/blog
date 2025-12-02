@@ -26,6 +26,7 @@ adaptado de [^Takenami]
     O programa deve obedecer as seguintes regras:
     - Só é possível fazer qualquer uma destas operações se o Aparelho de DVD estiver ligado;
     - Só é possível dar play no Aparelho de DVD se existir algum filme inserido;
+    - Só é possível inserir um Filme se não tiver um Filme ja dentro do Aparelho de DVD;
     - Só é possível dar stop se o Aparelho de DVD estiver em play;
     - Ao dar play deve aparecer o nome e a duração do filme que está sendo exibido.
 
