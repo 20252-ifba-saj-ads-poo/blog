@@ -16,9 +16,10 @@ star: true
 
 - [JDK](https://adoptium.net/temurin/releases/)
 - [Maven](https://maven.apache.org/)
-- Git
+- [Git](https://git-scm.com/install/windows)
     - [Github Desktop (windows)](https://desktop.github.com/)
-- Visual Studio Code
+- [Visual Studio Code](https://code.visualstudio.com/download)
+  - [Extension Pack for Java](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack)
 - [Scene Builder](https://gluonhq.com/products/scene-builder/)
 
 
