@@ -12,7 +12,7 @@ Cada aluno deve montar uma dupla e escolher um dos módulos abaixo para entregar
 
 Ao aceitar a tarefa, cada dupla deve criar uma equipe com o nome do sistema e do módulo escolhido, conforme o exemplo: 
 
-`Sistema1-Logistica-Equipe1-Modulo1`
+`Sistema1-Logistica-Modulo1`
 
 Não deve haver mais de uma equipe para o mesmo módulo.
 
