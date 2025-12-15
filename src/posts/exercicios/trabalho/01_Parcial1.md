@@ -8,7 +8,13 @@ category:
 
 # Parcial 1 do trabalho
 
-Entregar as telas no JavaFX ate o dia 10/02/2026.
+Cada aluno deve montar uma dupla e escolher um dos módulos abaixo para entregar as telas feitas em `JavaFX` até o dia `10/02/2026`.
+
+Ao aceitar a tarefa, cada dupla deve criar uma equipe com o nome do sistema e do módulo escolhido, conforme o exemplo: 
+
+`Sistema1-Logistica-Equipe1-Modulo1`
+
+Não deve haver mais de uma equipe para o mesmo módulo.
 
 ## Divisão dos módulos dos sistemas
 
