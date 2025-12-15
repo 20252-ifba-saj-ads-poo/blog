@@ -22,50 +22,50 @@ Entregar as telas no JavaFX ate o dia 10/02/2026.
 
 ## Sistema1-Logistica
 
-<!-- @include: ../../../../racunho/20252-trabalhos/Equipe1-Modulo1.md -->
+<!-- @include: ../../../../includes/trabalhos/Equipe1-Modulo1.md -->
 
-<!-- @include: ../../../../racunho/20252-trabalhos/Equipe1-Modulo2.md -->
+<!-- @include: ../../../../includes/trabalhos/Equipe1-Modulo2.md -->
 
-<!-- @include: ../../../../racunho/20252-trabalhos/Equipe1-Modulo3.md -->
+<!-- @include: ../../../../includes/trabalhos/Equipe1-Modulo3.md -->
 
-<!-- @include: ../../../../racunho/20252-trabalhos/Equipe1-Modulo4.md -->
+<!-- @include: ../../../../includes/trabalhos/Equipe1-Modulo4.md -->
 
-<!-- @include: ../../../../racunho/20252-trabalhos/Equipe1-Modulo5.md -->
+<!-- @include: ../../../../includes/trabalhos/Equipe1-Modulo5.md -->
 
 ## Sistema2-RastreamentoTR
 
-<!-- @include: ../../../../racunho/20252-trabalhos/Equipe2-Modulo1.md -->
+<!-- @include: ../../../../includes/trabalhos/Equipe2-Modulo1.md -->
 
-<!-- @include: ../../../../racunho/20252-trabalhos/Equipe2-Modulo2.md -->
+<!-- @include: ../../../../includes/trabalhos/Equipe2-Modulo2.md -->
 
-<!-- @include: ../../../../racunho/20252-trabalhos/Equipe2-Modulo3.md -->
+<!-- @include: ../../../../includes/trabalhos/Equipe2-Modulo3.md -->
 
-<!-- @include: ../../../../racunho/20252-trabalhos/Equipe2-Modulo4.md -->
+<!-- @include: ../../../../includes/trabalhos/Equipe2-Modulo4.md -->
 
 ## Sistema3-AdaptaCommerce
 
-<!-- @include: ../../../../racunho/20252-trabalhos/Equipe3-Modulo1.md -->
+<!-- @include: ../../../../includes/trabalhos/Equipe3-Modulo1.md -->
 
-<!-- @include: ../../../../racunho/20252-trabalhos/Equipe3-Modulo2.md -->
+<!-- @include: ../../../../includes/trabalhos/Equipe3-Modulo2.md -->
 
-<!-- @include: ../../../../racunho/20252-trabalhos/Equipe3-Modulo3.md -->
+<!-- @include: ../../../../includes/trabalhos/Equipe3-Modulo3.md -->
 
-<!-- @include: ../../../../racunho/20252-trabalhos/Equipe3-Modulo4.md -->
+<!-- @include: ../../../../includes/trabalhos/Equipe3-Modulo4.md -->
 
-<!-- @include: ../../../../racunho/20252-trabalhos/Equipe3-Modulo5.md -->
+<!-- @include: ../../../../includes/trabalhos/Equipe3-Modulo5.md -->
 
-<!-- @include: ../../../../racunho/20252-trabalhos/Equipe3-Modulo6.md -->
+<!-- @include: ../../../../includes/trabalhos/Equipe3-Modulo6.md -->
 
 
 ## Sistema4-SAJDrive
 
-<!-- @include: ../../../../racunho/20252-trabalhos/Equipe4-Modulo1.md -->
+<!-- @include: ../../../../includes/trabalhos/Equipe4-Modulo1.md -->
 
-<!-- @include: ../../../../racunho/20252-trabalhos/Equipe4-Modulo2.md -->
+<!-- @include: ../../../../includes/trabalhos/Equipe4-Modulo2.md -->
 
-<!-- @include: ../../../../racunho/20252-trabalhos/Equipe4-Modulo3.md -->
+<!-- @include: ../../../../includes/trabalhos/Equipe4-Modulo3.md -->
 
-<!-- @include: ../../../../racunho/20252-trabalhos/Equipe4-Modulo4.md -->
+<!-- @include: ../../../../includes/trabalhos/Equipe4-Modulo4.md -->
 
 
 
