@@ -75,6 +75,6 @@ Não deve haver mais de uma equipe para o mesmo módulo.
 
 
 
-## Link
-[Entrega](https://classroom.github.com/a/rnhKVt-y)
+## Entrega
+[Link para Entrega](https://classroom.github.com/a/rnhKVt-y)
 
