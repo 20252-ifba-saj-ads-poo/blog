@@ -156,7 +156,7 @@ curl -s "https://get.sdkman.io" | bash
 Abrir um novo terminal e rodar:
 
 ```console
-sdk install java 21-tem
+sdk install java 25-tem
 ```
 
 ```console
