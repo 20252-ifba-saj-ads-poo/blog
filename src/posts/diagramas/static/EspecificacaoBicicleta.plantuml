@@ -1,7 +1,8 @@
 ```plantuml
 @startuml
 left to right direction
-map "Especificação \nde uma Bicicleta\n {numeroDeBicicletas=3}" as Bicicleta{
+map "Especificação \nde uma Bicicleta" as Bicicleta{
+  numeroDeBicicletas =>3
 }
 map bicicleta1{
   id =>1
