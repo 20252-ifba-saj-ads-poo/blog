@@ -364,12 +364,26 @@ Em alguns lugares do sistema do banco será mais vantajoso tratar um objeto da c
 
 O registro da entrada ou saída não depende do cargo do funcionário. Não faz sentido criar um  método que registre a entrada para cada tipo de funcionário, pois eles serão sempre idênticos. Analogamente, não faz sentido criar um método que registre a saída para cada tipo de funcionário.
 
+<figure>
+
+```plantuml
+@startuml
+class Funcionario{
+    + getCodigo()
+}
+class Gerente extends Funcionario
+class Telefonista extends Funcionario
+@enduml
+```
+<figcaption>UML da relação entre Funcionario, Gerente e Telefonista.</figcaption>
+</figure>
+
 Dado que podemos tratar os objetos das classes derivadas de `Funcionario` como sendo objetos dessa classe, podemos implementar um método que seja capaz de registrar a entrada de qualquer funcionário independentemente do cargo. Analogamente, podemos fazer o mesmo para o procedimento de saída.
 ```java
 class ControleDePonto {
     public void registraEntrada(Funcionario f) {
-    SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/ yyyy HH:mm:ss") ;
-    Date agora = new Date() ;
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/ yyyy HH:mm:ss") ;
+        Date agora = new Date() ;
         IO.println("ENTRADA:"+f.getCodigo());
         IO.println("DATA:"+sdf.format(agora));
     }

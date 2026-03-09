@@ -52,7 +52,7 @@ public abstract class Pessoa {
     String nome; 
     public abstract void estacionar(); 
     public void entrar(){ 
-        System.out.println("Entrando na Faculdade"); 
+        IO.println("Entrando na Faculdade"); 
     } 
 }
 ```
@@ -62,7 +62,7 @@ public class Aluno extends Pessoa {
     double media; 
 
     public void estacionar(){ 
-        System.out.println("Estacionando na área para estudante..."); 
+        IO.println("Estacionando na área para estudante..."); 
     } 
 } 
 ```
@@ -71,7 +71,7 @@ public class Aluno extends Pessoa {
 public class Professor extends Pessoa { 
     double salario;
     public void estacionar(){ 
-        System.out.println("Estacionando nas vagas de professor"); 
+        IO.println("Estacionando nas vagas de professor"); 
     } 
 }
 ```
@@ -130,7 +130,7 @@ Considere o nosso `ControleDeBonificacao`:
 class ControleDeBonificacoes {
     private double totalDeBonificacoes = 0;
     public void registra(Funcionario f) {
-        System.out.println("Adicionando bonificação do funcionario: " + f);
+        IO.println("Adicionando bonificação do funcionario: " + f);
         this.totalDeBonificacoes += f.getBonificacao();
     }
     public double getTotalDeBonificacoes() {
@@ -332,12 +332,13 @@ As classes concretas que derivam direta ou indiretamente da classe Conta devem p
 class ContaPoupanca extends Conta {
     private int diaDoAniversario ;
     public void imprimeExtratoDetalhado(){
-        System.out.println("EXTRATO DETALHADO DE CONTA POUPANÇA") ;
-        SimpleDateFormat sdf = new SimpleDateFormat ("dd/MM/yyyy HH:mm:ss") ;
-        Date agora = new Date();
-        System.out.println("DATA:"+sdf.format(agora));
-        System.out.println("SALDO:"+this.getSaldo());
-        System.out.println("ANIVERSÁRIO:"+this.diaDoAniversario);
+        IO.println("EXTRATO DETALHADO DE CONTA POUPANÇA") ;
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss")
+        LocalDateTime agora = LocalDateTime.now();
+        
+        IO.println("DATA:"+ agora.format(formatter));
+        IO.println("SALDO:"+this.getSaldo());
+        IO.println("ANIVERSÁRIO:"+this.diaDoAniversario);
     }
 }
 ```
@@ -606,8 +607,15 @@ Perceba que o código pode parecer estranho, pois a interface não declara méto
 
 ```plantuml
 @startuml
-interface Conta
-interface  Tributavel
+interface Conta{
+    + double getSaldo()
+    + void deposita(double valor)
+    + void saca(double valor)
+    + void atualiza(double taxaSelic)
+}
+interface  Tributavel{
+    + void calcularTributo()
+}
 interface ContaTributavel extends Conta, Tributavel
 class ContaInvestimento implements ContaTributavel
 @enduml
@@ -631,7 +639,7 @@ public interface ExemploInterface {
     void metodoAbstrato();
 
     default void metodoDefault() {
-        System.out.println("Implementação padrão do método default.");
+        IO.println("Implementação padrão do método default.");
     }
 }
 ```
@@ -641,7 +649,7 @@ As classes que implementam essa interface podem optar por sobrescrever o método
 public class ExemploClasse implements ExemploInterface {
     @Override
     public void metodoAbstrato() {
-        System.out.println("Implementação do método abstrato.");
+        IO.println("Implementação do método abstrato.");
     }
 
     // Não é necessário sobrescrever o método default
@@ -654,12 +662,12 @@ Se uma classe implementa várias interfaces que possuem métodos `default` com o
 ```java
 public interface InterfaceA {
     default void metodo() {
-        System.out.println("InterfaceA - método default");
+        IO.println("InterfaceA - método default");
     }
 }
 public interface InterfaceB {
     default void metodo() {
-        System.out.println("InterfaceB - método default");
+        IO.println("InterfaceB - método default");
     }
 }
 public class ExemploClasse implements InterfaceA, InterfaceB {
@@ -674,7 +682,9 @@ public class ExemploClasse implements InterfaceA, InterfaceB {
 
 Caso a classe não sobrescreva o método, ocorrerá um erro de compilação devido à ambiguidade entre os métodos `default` das interfaces.
 
+::: danger
 > _Duplicate default methods named metodo with the parameters () and () are inherited from the types InterfaceB and InterfaceAJava(67109917)_
+:::
 
 
 ## Referências

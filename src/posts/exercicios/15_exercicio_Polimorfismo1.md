@@ -78,7 +78,7 @@ adapitado de [^Takenami]
 
 ## Entrega
 
-[Link](https://classroom.github.com/a/hhQitBTw)
+[Link]()
 
 
 <!-- @include: ../../../includes/bib.md -->
