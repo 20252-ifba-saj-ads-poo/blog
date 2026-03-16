@@ -8,7 +8,7 @@ public class TestaVeiculos {
         // Criando veículos
         Carro carro = new Carro("Sedan", motorCarro);
         Moto moto = new Moto("Esportiva", motorMoto);
-        CaminhaoEletrico caminhao = new CaminhaoEletrico("Carga Pesada", motorCaminhao);
+        Caminhao caminhao = new Caminhao("Carga Pesada", motorCaminhao);
 
         // Ligando os veículos
         carro.ligar();

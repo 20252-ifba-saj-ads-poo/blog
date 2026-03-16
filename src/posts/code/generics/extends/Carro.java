@@ -1,4 +1,3 @@
-import java.io.IO;
 
 public class Carro extends Veiculo<MotorCombustao> {
     public Carro(String modelo, MotorCombustao motor) {

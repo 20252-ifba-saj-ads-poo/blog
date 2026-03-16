@@ -1,4 +1,3 @@
-import java.io.IO;
 
 public class Moto extends Veiculo<MotorCombustao> {
     public Moto(String modelo, MotorCombustao motor) {
@@ -7,6 +6,6 @@ public class Moto extends Veiculo<MotorCombustao> {
 
     @Override
     public void ligar() {
-        IO.println("Moto " + getModelo() + " com " + getMotor() + " está ligada.");
+        IO.println("Moto " + getModelo() + " com " + getMotor() + " está ligada com "+getMotor().getCilindradas()+" Cilindradas" );
     }
 }

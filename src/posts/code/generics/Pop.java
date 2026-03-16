@@ -1,4 +1,3 @@
-import java.io.IO;
 
 public class Pop extends Veiculo<Integer> {
     public Pop(String modelo, Integer motor) {

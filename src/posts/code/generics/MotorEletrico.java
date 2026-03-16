@@ -9,4 +9,8 @@ public class MotorEletrico {
     public String toString() {
         return "Motor Elétrico (" + potenciaKW + "kW)";
     }
+
+    public int getPotenciaKW() {
+        return potenciaKW;
+    }
 }

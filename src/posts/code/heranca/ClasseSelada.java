@@ -1,4 +1,3 @@
-import java.io.IO;
 
 sealed public class ClasseSelada permits SubClasse1, SubClasse2 {
     public void metodo() {

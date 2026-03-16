@@ -1,7 +1,6 @@
-import java.io.IO;
 
-public class CaminhaoEletrico extends Veiculo<MotorEletrico> {
-    public CaminhaoEletrico(String modelo, MotorEletrico motor) {
+public class Caminhao extends Veiculo<MotorEletrico> {
+    public Caminhao(String modelo, MotorEletrico motor) {
         super(modelo, motor);
     }
 

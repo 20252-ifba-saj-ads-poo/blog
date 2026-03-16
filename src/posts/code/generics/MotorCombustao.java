@@ -9,4 +9,8 @@ public class MotorCombustao {
     public String toString() {
         return "Motor Combustão (" + cilindradas + "cc)";
     }
+
+    public int getCilindradas() {
+        return cilindradas;
+    }
 }

@@ -1,4 +1,3 @@
-import java.io.IO;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,14 +15,14 @@ public class ExemploGenerics {
         String texto1 = listaDeStrings.get(0);
         String texto2 = listaDeStrings.get(1);
 
-        IO.println("Texto 1: " + texto1);
-        IO.println("Texto 2: " + texto2);
+        System.out.println("Texto 1: " + texto1);
+        System.out.println("Texto 2: " + texto2);
 
         // Exemplo com classe genérica
         Caixa<Integer> caixaDeInteiros = new Caixa<>();
         caixaDeInteiros.setConteudo(42);
         int valor = caixaDeInteiros.getConteudo(); // Sem cast
-        IO.println("Valor na caixa: " + valor);
+        System.out.println("Valor na caixa: " + valor);
     }
 }
 

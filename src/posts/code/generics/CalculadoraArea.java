@@ -1,11 +1,18 @@
-public class CalculadoraArea<T extends FormaGeometrica> {
-    private T forma;
+import java.util.ArrayList;
+import java.util.List;
 
-    public CalculadoraArea(T forma) {
-        this.forma = forma;
+public class CalculadoraArea<T extends FormaGeometrica> {
+    private List<T> formas;
+
+    public CalculadoraArea() {
+        this.formas = new ArrayList<>();
+    }
+
+    public void adicionarForma(T forma) {
+        formas.add(forma);
     }
 
     public double calcular() {
-        return forma.calcularArea();
+        return formas.stream().mapToDouble(FormaGeometrica::calcularArea).sum();
     }
 }
