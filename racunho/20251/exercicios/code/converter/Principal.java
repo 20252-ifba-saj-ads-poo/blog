@@ -7,9 +7,9 @@ void main() {
     // ce = new ConverterExtenso3Digitos(999);
     //IO.println(ce);
     // -> Novecentos e Noventa e Nove
-     ce = new ConverterExtenso2Digitos(23);
+    ce = new ConverterExtenso2Digitos(13);
     IO.println(ce);
     // -> Noventa e Nove
-    //ce = new ConverterExtenso1Digito(6);
+    //ce = new ConverterExtenso1Digito(65);
     //IO.println(ce);
 }

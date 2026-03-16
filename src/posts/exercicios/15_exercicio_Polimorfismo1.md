@@ -55,7 +55,6 @@ adapitado de [^Takenami]
         }
     }
     ```
-<!--
 
     ::: details 
    
@@ -71,7 +70,6 @@ adapitado de [^Takenami]
 
    ::: 
 
--->
 
   
 2. Modifique o método `transferir` da classe `Banco` para utilizar uma classe `Transferir` que herde de `Operacao`:

@@ -1,6 +1,6 @@
 public class ConverterExtenso2Digitos extends ConverterExtenso1Digito {
     private int numero;
-    private String[] porExtenso =  { "", "Dez", "Vinte", "Trinta"}; 
+    private String[] porExtenso =  { "", "Dez", "Vinte", "Trinta", "Quarenta", "Cinquenta"}; 
     
     public ConverterExtenso2Digitos(int numero){
         super(numero%10);

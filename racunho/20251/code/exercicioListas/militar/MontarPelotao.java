@@ -2,12 +2,12 @@ package posts.code.exercicioListas.militar;
 
 public class MontarPelotao {
     public static void main(String[] args) {
-        Soldado s1 = new Soldado( "Leandro", 1);
+        Soldado s1 = new Soldado("Leandro", 1);
         Soldado s2 = new Soldado("Leandro2", 12);
         Soldado s3 = new Soldado("Leandro3", 13);
         Cabo c1 = new Cabo("Caboclo", 10);
-        c1.addSubordinado(s1);
-        // s1.setImediato(c1);
+        s1.setImediato(c1);
+        c1.addSubordinado(s2);
         s2.setImediato(c1);
         s3.setImediato(c1);
         c1.addSubordinado(s3);

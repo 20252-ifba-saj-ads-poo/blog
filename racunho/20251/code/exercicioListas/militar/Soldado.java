@@ -37,6 +37,11 @@ public class Soldado {
     // TODO fazer remoção de subordinado na troca do imediato
     public void setImediato(Cabo imediato) {
         if (!(Objects.equals(this.imediato, imediato))) {
+            //imediato antigo
+            if(this.imediato != null){
+                this.imediato.removeSubordinado(this);
+            }
+            //imediato novo 
             this.imediato = imediato;
             this.imediato.addSubordinado(this);
         }

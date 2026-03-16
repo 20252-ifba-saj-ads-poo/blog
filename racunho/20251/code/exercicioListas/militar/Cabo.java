@@ -46,6 +46,11 @@ public class Cabo {
         }
     }
 
+    public void removeSubordinado(Soldado soldado) {
+        subordinados.remove(soldado);        
+    }
+
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
