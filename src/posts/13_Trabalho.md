@@ -107,3 +107,6 @@ O barema a seguir será utilizado para avaliar a implementação do projeto. Cad
 
 ### 5. **Boas Práticas - 10 pontos**
    - **Boas Práticas de Programação (10 pontos)**: O código segue boas práticas, incluindo nomeação adequada de variáveis, métodos e classes, além de evitar duplicação de código e garantir uma organização clara do projeto.
+
+
+[https://github.com/20252-ifba-saj-ads-poo/trabalho-semestre-prof](https://github.com/20252-ifba-saj-ads-poo/trabalho-semestre-prof)
