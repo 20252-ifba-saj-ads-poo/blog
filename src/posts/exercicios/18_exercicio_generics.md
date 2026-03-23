@@ -1,6 +1,6 @@
 ---
 icon: dumbbell
-date: 2025-08-14 19:00:00.00 -3
+date: 2026-03-16 19:30:00.00 -3
 tag:
   - heranca
   - generics

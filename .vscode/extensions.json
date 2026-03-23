@@ -2,6 +2,7 @@
     "recommendations": [
         "streetsidesoftware.code-spell-checker-portuguese-brazilian",
         "streetsidesoftware.code-spell-checker",
-        "shd101wyy.markdown-preview-enhanced"
+        "shd101wyy.markdown-preview-enhanced",
+        "jebbs.plantuml"
     ]
 }
