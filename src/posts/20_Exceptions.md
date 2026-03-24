@@ -5,7 +5,7 @@ tag:
   - exception
 category:
   - aula
-order: 22
+order: 20
 ---
 # Exceptions
 
