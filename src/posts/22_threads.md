@@ -289,6 +289,7 @@ Estas soluções são mais eficientes que usar `synchronized` porque:
 ```java
 import java.util.UUID;
 import java.util.concurrent.atomic.AtomicLong;
+import java.lang.reflect.Constructor;
 
 public class IdGenerator {
 
